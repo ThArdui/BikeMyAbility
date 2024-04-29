@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/formserachbike', function ()
+Route::get('/recherchevelos', function ()
 {
-    return view('searchbike');
+    return view('bikesearch');
 });
 
 Route::get('/', function () {
