@@ -52,9 +52,9 @@
         <legend> Pédalage </legend>
         <select id="pedal" name="pedal" required>
             <option>Pedalage</option>
-            <option> Ja sais pédaler </option>
-            <option> Ja sais pédaler un peu </option>
-            <option> Ja sais pas pédaler </option>
+            <option> Je sais pédaler </option>
+            <option> Je sais pédaler un peu </option>
+            <option> Je sais pas pédaler </option>
 
         </select>
     </fieldset>

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/searchbike.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bikesearch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bikesearch.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +205,7 @@
       <workItem from="1714234143413" duration="647000" />
       <workItem from="1714390482025" duration="870000" />
       <workItem from="1714412554050" duration="1857000" />
-      <workItem from="1714414428501" duration="105000" />
+      <workItem from="1714414428501" duration="783000" />
     </task>
     <servers />
   </component>
