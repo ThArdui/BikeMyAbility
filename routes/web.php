@@ -1,5 +1,13 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 
 
+
+Route::get('/recherchevelos', function ()
+{
+    return view('bikesearch');
+});
+
+Route::get('/', function () {
+    return view('welcome');
+});
