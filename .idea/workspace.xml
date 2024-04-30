@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_04_30_152458_create_bikes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_04_30_152458_create_bikes_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,9 +179,6 @@
       <option name="pestRunnerSettings">
         <PestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
       </option>
-      <option name="runnerSettings">
-        <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
-      </option>
       <method v="2" />
     </configuration>
   </component>
@@ -205,7 +203,11 @@
       <workItem from="1714390482025" duration="870000" />
       <workItem from="1714412554050" duration="1857000" />
       <workItem from="1714414428501" duration="783000" />
-      <workItem from="1714464741440" duration="1569000" />
+      <workItem from="1714464741440" duration="3048000" />
+      <workItem from="1714492355739" duration="6575000" />
+      <workItem from="1714510100230" duration="757000" />
+      <workItem from="1714510884304" duration="272000" />
+      <workItem from="1714511172742" duration="2422000" />
     </task>
     <servers />
   </component>
