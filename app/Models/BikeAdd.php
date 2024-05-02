@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class BikeAdd extends Model
 {
-    protected $table = 'bikes_table2';
+    protected $table = 'bikes_table';
 
     protected $fillable = [
         'Bike_name',
         'Description',
-        'Pro s',
-        'Con s',
+        'Pros',
+        'Cons',
         'Weight',
         'Foldable',
         'Speeds_number',
