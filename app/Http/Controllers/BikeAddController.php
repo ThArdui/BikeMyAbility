@@ -9,7 +9,7 @@ class BikeAddController extends Controller
     public function addBike()
     {
              BikeAdd::create([
-                 'Bike_name' => 'Easy ride Van Raam',
+                 'Bike_name' => 'trotinette ',
                  'Use_solo' => true,
                  'Use_duo' => false,
                  'Use_several' =>false ,

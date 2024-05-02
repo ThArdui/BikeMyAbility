@@ -14,6 +14,17 @@ return new class extends Migration
         Schema::create('bikes_table2', function (Blueprint $table) {
                 $table->id();
                 $table->string('Bike_name', 50);
+            $table->string('Description', 500);
+            $table->string('Pro s', 500);
+            $table->string('Con s ', 50);
+            $table->number('Weight');
+            $table->boolean('Foldable')->default(false);
+            $table->number('Speeds_number');
+            $table->string('Breaks_type', 50);
+            $table->boolean('Electric_assistance')->default(false);
+            $table->string('Seat_type', 50);
+
+
                 $table->boolean('Use_solo')->default(false);
                 $table->boolean('Use_duo')->default(false);
                 $table->boolean('Use_several')->default(false);
