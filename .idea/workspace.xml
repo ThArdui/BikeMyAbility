@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BikeAddController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BikeAddController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BikeAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BikeAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_04_30_202229_create_bikes_table2.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_04_30_202229_create_bikes_table2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,11 +215,23 @@
       <workItem from="1714510100230" duration="757000" />
       <workItem from="1714510884304" duration="272000" />
       <workItem from="1714511172742" duration="2422000" />
-      <workItem from="1714555126491" duration="7835000" />
+      <workItem from="1714555126491" duration="15714000" />
+      <workItem from="1714638547797" duration="11996000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -10,6 +10,15 @@ class BikeAdd extends Model
 
     protected $fillable = [
         'Bike_name',
+        'Description',
+        'Pro s',
+        'Con s',
+        'Weight',
+        'Foldable',
+        'Speeds_number',
+        'Breaks_type',
+        'Electric_assistance',
+        'Seat_type',
         'Use_solo',
         'Use_duo',
         'Use_several',

@@ -31,3 +31,4 @@ class InscriptionController extends Controller
         return redirect('/bikesearch')->with('success', 'Inscription réussie !');
     }
 }
+<
