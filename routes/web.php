@@ -3,7 +3,10 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\BikeAddController;
+// Route::put('/update-record/{id}', [BikeAddController::class, 'updateRecord']);
+
 Route::get('/add-bike', [BikeAddController::class, 'addBike'])->name('bikes.add');
+
 Route::get('/inscription', [InscriptionController::class, 'showRegistrationForm'])->name('inscription');
 Route::post('/inscription', [InscriptionController::class, 'register']);
 Route::get('/bikesearch', function () {

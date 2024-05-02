@@ -44,10 +44,10 @@ return new class extends Migration
                 $table->boolean('Md_partial')->default(false);
                 $table->boolean('No_md')->default(false);
                 $table->boolean('Pedalok')->default(false);
-                $table->boolean('Partialpedal')->default(false);
-                $table->boolean('Nopedal')->default(false);
-                $table->string('Picture')->nullable(); // Assuming a path to the image will be stored
-                $table->text('Bikeview')->nullable(); // Assuming blade view path or some HTML content
+                    $table->boolean('Partialpedal')->default(false);
+                    $table->boolean('Nopedal')->default(false);
+                    $table->string('Picture')->nullable(); // Assuming a path to the image will be stored
+                    $table->text('Bikeview')->nullable(); // Assuming blade view path or some HTML content
                 $table->timestamps();
         });
     }
