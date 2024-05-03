@@ -10,7 +10,7 @@ class BikeAddController extends Controller
     // Vous pourriez nommer cette méthode selon l'action qu'elle effectue, par exemple addBike()
     public function addBike()
     {
-<<<<<<< HEAD
+
              BikeAdd::create([
                  'Bike_name' => 'trotinette ',
                  'Use_solo' => true,
