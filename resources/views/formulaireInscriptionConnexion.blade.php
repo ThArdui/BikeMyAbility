@@ -5,7 +5,7 @@
     <label for="name">Nom</label>
     <input type="text" id="name" name="name" max="255" required>
     <label for="firstname">Prenom</label>
-    <input type="text" id="firstname" name="firstname" max="255">
+    <input type="text" id="firstname" name="firstname" max="255" required>
     <label for="email">Email - example : nom@example.com</label>
     <input type="text" id="email" name="email" max="255" required>
     <label for="password">Mot de passe</label>
