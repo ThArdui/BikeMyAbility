@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
+
 class BikeSearch extends model
 {  protected $table = 'bikes_table';
     protected $fillable = [

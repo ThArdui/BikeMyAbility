@@ -29,4 +29,19 @@ class BikeSearchController extends controller
         // Passez les résultats à la vue
         return view('results-bikes', ['results' => $results]);
     }
+    public function showBike(Request $request)
+    {
+        // Récupérez les attributs booléens du formulaire
+        $solo = $request->input('solo');
+
+
+        // Effectuez la requête pour récupérer les résultats de la table 'bikes'
+        $results = bikes_table::where('solo', $solo)
+
+            ->get();
+
+        // Passez les résultats à la vue 'results-bikes'
+        return view('results-bikes', ['results' => $results]);
+    }
+
 }
