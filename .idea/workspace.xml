@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +158,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2fgjt2M1rujXxLd0flrbdfgEM09" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -178,9 +183,6 @@
     <configuration name="Main" type="PestRunConfigurationType">
       <option name="pestRunnerSettings">
         <PestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
-      </option>
-      <option name="runnerSettings">
-        <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
       </option>
       <method v="2" />
     </configuration>
@@ -219,7 +221,8 @@
       <workItem from="1714682715827" duration="298000" />
       <workItem from="1714683567435" duration="602000" />
       <workItem from="1714727424771" duration="7962000" />
-      <workItem from="1714744780586" duration="6816000" />
+      <workItem from="1714744780586" duration="9368000" />
+      <workItem from="1714820787600" duration="16281000" />
     </task>
     <servers />
   </component>
@@ -242,7 +245,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>11</line>
+          <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

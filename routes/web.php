@@ -5,7 +5,9 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\BikeAddController;
 
 use App\Http\Controllers\BikeSearchController;
-
+Route::get('/biketodbform',function (){
+    return view('addbiketodbform');
+});// route provisoire vers le formualaire qui potentielllement ajouterai uun vélo à la db
 Route::get('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 
 // Route::put('/update-record/{id}', [BikeAddController::class, 'updateRecord']);
