@@ -11,7 +11,6 @@ class BikeAddController extends Controller
 {
     public function checkAndAddBike($_bikeData):\Illuminate\Http\JsonResponse
     {
-<<<<<<< HEAD
 
              BikeAdd::create([
                  'Bike_name' => 'trotinette ',
@@ -38,10 +37,9 @@ class BikeAddController extends Controller
         'Nopedal' => false,
         'Picture' => 'resources/pictures/imagetestbike.jpg',
         'Bikeview' => 'bikeeasyrider'
-=======
+
         // Vérifier d'abord si un enregistrement avec le même nom de vélo existe déjà
         $existingBike = BikeAdd::where('Bike_name', $_bikeData['Bike_name'])->first();
->>>>>>> 2fbd18e27e346e1509f2894e12ce478bb8f58c00
 
         // Si un enregistrement existe déjà avec le même nom de vélo, renvoyer un message approprié
         if ($existingBike) {
