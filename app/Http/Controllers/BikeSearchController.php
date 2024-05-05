@@ -13,14 +13,34 @@ class BikeSearchController extends controller
     {
         // Récupérez les critères de recherche depuis la requête
         $searchCriteria = $request->all();
-
         // Construisez la requête pour rechercher les vélos correspondants
         $query = BikeSearch::query();
-
         // Ajoutez des conditions pour chaque critère de recherche
         if (isset($searchCriteria['Use_solo'])) {
             $query->where('Use_solo', true);
         }
+        if (isset($searchCriteria['Use_duo'])) {
+            $query->where('Use_duo', true);
+        }
+        if (isset($searchCriteria['Use_several'])) {
+            $query->where('Use_several', true);
+        }
+        if (isset($searchCriteria['Use_uselegs'])) {
+            $query->where('Use_uselegs', true);
+        }
+        if (isset($searchCriteria['Use_usearms'])) {
+            $query->where('Use_usearms', true);
+        }
+        if (isset($searchCriteria['Use_balance'])) {
+            $query->where('Use_balance', true);
+        }
+        if (isset($searchCriteria['Use_dexterity'])) {
+            $query->where('Use_dexterity', true);
+        }
+        if (isset($searchCriteria['Use_pedal'])) {
+            $query->where('Use_pedal', true);
+        }
+
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
