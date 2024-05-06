@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\AddBikeToDb;
 
 use App\Http\Controllers\BikeSearchController;
 // route pour ajouter un velo comme utilisateur
@@ -9,12 +10,11 @@ Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });// route provisoire vers le formualaire qui potentielllement ajouterai uun vélo à la db
 // route dd resultat de recherche de velo ok
-Route::get('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);// yes
+Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);// yes
 // Route::put('/update-record/{id}', [BikeAddController::class, 'updateRecord']);
 //Route::get('/add-bike', [BikeAddController::class, 'addBike'])->name('bikes.add');
 // route pour s inscrire get et post ok
 
-use App\Http\Controllers\AddBikeToDb;
 
 Route::post('/add-bike-db', [AddBikeToDb::class,'Add_Bike_To_Db'])->name('add-bike-db');
 Route::get('/resultatajoutdbb', function ()
@@ -24,7 +24,7 @@ Route::get('/resultatajoutdbb', function ()
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });// route provisoire vers le formualaire qui potentielllement ajouterai uun vélo à la db
-Route::get('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
+Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 
 Route::get('/inscription', [InscriptionController::class, 'showRegistrationForm'])->name('inscription');
 Route::post('/inscription', [InscriptionController::class, 'register']);

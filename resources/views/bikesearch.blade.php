@@ -1,5 +1,5 @@
 <h1> Trouvez votre vélo idéal</h1>
-<form action="/rechercher-velos" method="get">
+<form action="/rechercher-velos" method="post">
     @csrf
     <fieldset>
         <legend> Comment souhaitez-vous vivre votre plaisir cyclable?</legend>

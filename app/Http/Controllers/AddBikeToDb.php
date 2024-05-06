@@ -51,7 +51,7 @@
                 'bike_view' => 'required|url',
             ]);
 
-            BikeAdd::create([
+            $newBike=BikeAdd::create([
                 'Bike_name' => $request->input('bike_name'),
                 'Description' => $request->input('description'),
                 'Pros' => $request->input('pros'),

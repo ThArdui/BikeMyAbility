@@ -50,7 +50,6 @@ return new class extends Migration
             $table->text('Bikeview')->nullable(); // Assuming blade view path or some HTML content
             $table->timestamps();
         });
-
     }
 
     /**

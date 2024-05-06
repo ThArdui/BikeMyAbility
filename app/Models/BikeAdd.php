@@ -44,7 +44,5 @@ class BikeAdd extends Model
         'Bikeview',
     ];
 
-    public static function create(array $array)
-    {
-    }
+
 }
