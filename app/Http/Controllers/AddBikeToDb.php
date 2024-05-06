@@ -18,7 +18,7 @@
             $request->validate([
                 'bike_name' => 'required|string|min:5|max:255',
                 'description' => 'required|string|min:10',
-                'pros' => 'required|string|min:10',
+                'pros' => 'required|string|min:10',/*
                 'cons' => 'required|string|min:10',
                 'weight' => 'required|numeric|min:0',
                 'foldable' => 'required|boolean',
@@ -48,7 +48,7 @@
                 'partial_pedal' => 'required|boolean',
                 'no_pedal' => 'required|boolean',
                 'picture' => 'required|file|image|mimes:jpeg,png|max:2048',
-                'bike_view' => 'required|url',
+                'bike_view' => 'required|url',*/
             ]);
 
             $newBike=BikeAdd::create([
