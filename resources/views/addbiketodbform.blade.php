@@ -31,8 +31,12 @@
         <textarea id="description" name="description" rows="4" cols="50" required value="{{ old('description') }}"></textarea>
         <p>
             <label for="pros">Avantages: </label>
-            <textarea id="pros" name="pros" rows="4" cols="50" required></textarea>
-
+            <textarea id="pros" name="pros" rows="4" cols="50" class="form-control {{ $errors->has('pros') ? 'is-invalid': '' }}"  value="{{ old('pros') }}" required></textarea>
+            @if($errors->has('pros'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('pros') }}</strong>
+                </span>
+            @endif
         </p>
         <p>
 
