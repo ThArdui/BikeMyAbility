@@ -17,7 +17,7 @@ Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);//
 
 
 Route::post('/add-bike-db', [AddBikeToDb::class,'Add_Bike_To_Db'])->name('add-bike-db');
-Route::get('/resultatajoutdbb', function ()
+Route::get('/resultaddbiketodb', function ()
 {
     return view('resultaddbiketodb');
 })->name('resultaddbiketodb');

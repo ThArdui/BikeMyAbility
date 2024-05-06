@@ -267,7 +267,7 @@
         <legend> Données pour la page web </legend>
         <p>
             <label for="picture"> Veuillez insérez une image?</label>
-            <input type="file" name="picture" id="picture" required>
+            <input type="file"  accept="image/jpeg, image/png" maxlength="2048" name="picture" id="picture" required>
 
         </p>
 
