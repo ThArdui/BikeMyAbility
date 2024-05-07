@@ -25,10 +25,24 @@
                 'speeds_number' => 'required|integer|min:0',
                 'breaks_type' => 'required|string|max:255',
                 'electric_assitance' => 'required|boolean',
-                'seat_type' => 'required|string|max:255',
+               /*  A AJOUTER DANS LA DB ,?'seat_type' => 'required|string|max:255',*/
                 'use_solo' => 'required|boolean',
                 'use_duo' => 'required|boolean',
                 'use_several' => 'required|boolean',
+                'pedal_legs' => 'required|boolean',
+                'pedal_arms' => 'required|boolean',
+                'pedal_arms_legs' => 'required|boolean',
+                'no_pedal' => 'required|boolean',
+                'dexterity_good' => 'required|boolean',
+                'dexterity_middel' => 'required|boolean',
+                'no_dexterity' => 'required|boolean',
+                'saddel_ok'=> 'required|boolean',
+                'seat_needed'=> 'required|boolean',
+                'seat_needed_plus'=> 'required|boolean',
+                'wheelchair'=> 'required|boolean',
+                /*'picture' => 'required|file|image|mimes:jpeg,png|max:2048',*/
+
+                /*
                 'use_legs' => 'required|boolean',
                 'partial_use_legs' => 'required|boolean',
                 'no_legs' => 'required|boolean',
@@ -46,9 +60,9 @@
                 'no_md' => 'required|boolean',
                 'pedal_ok' => 'required|boolean',
                 'partial_pedal' => 'required|boolean',
-                'no_pedal' => 'required|boolean',/*
-                'bike_view' => 'required|url',
-                'picture' => 'required|file|image|mimes:jpeg,png|max:2048',*/
+                'no_pedal' => 'required|boolean',
+                'bike_view' => 'required|url', */
+
             ]);
 
             $newBike=BikeAdd::create([
@@ -61,30 +75,24 @@
                 'Speeds_number' => $request->input('speeds_number'),
                 'Breaks_type' => $request->input('breaks_type'),
                 'Electric_assistance' => $request->input('electric_assitance', false), // même chose ici
-                'Seat_type' => $request->input('seat_type'),
+             /*   a mettre si on ajoute ce champ dans la dbb'Seat_type' => $request->input('seat_type'),*/
                 'Use_solo' => $request->input('use_solo', false),
                 'Use_duo' => $request->input('use_duo', false),
                 'Use_several' => $request->input('use_several', false),
-                'Uselegs' => $request->input('use_legs', false),
-                'Partial_uselegs' => $request->input('partial_use_legs', false),
-                'No_legs' => $request->input('no_legs', false),
-                'V_good_usearms' => $request->input('very_good_use_arms', false),
-                'Good__usearms' => $request->input('good_use_arms', false),
-                'Partial_usearms' => $request->input('partial_use_arms', false),
-                'No_usearms' => $request->input('no_use_arms', false),
-                'Saddelok' => $request->input('saddel_ok', false),
-                'Partialsaddelok' => $request->input('partial_saddel_ok', false),
-                'Seat_needed' => $request->input('seat_needed', false),
-                'Seat_needed_plus' => $request->input('seat_needed_plus', false),
-                'Wheelchair' => $request->input('wheelchair', false),
-                'Md_good' => $request->input('md_good', false),
-                'Md_partial' => $request->input('md_partial', false),
-                'No_md' => $request->input('no_md', false),
-                'Pedalok' => $request->input('pedal_ok', false),
-                'Partialpedal' => $request->input('partial_pedal', false),
-                'Nopedal' => $request->input('no_pedal', false),
-                'Picture' => $request->input('picture'),
-                'Bikeview' => $request->input('bike_view'),
+
+                'pedal_legs'=>$request->input('pedal_legs',false),/* fait jusqu'ici*/
+                'pedal_arms'=>$request->input('pedal_arms',false),
+                'pedal_arms_legs'=>$request->input('pedal_arms_legs',false),
+                'no_pedal'=>$request->input('no_pedal',false),
+                'dexterity_good'=>$request->input('dexterity_good',false),
+                'dexterity_middel'=>$request->input('dexterity_middel',false),
+                'no_dexterity'=>$request->input('no_dexterity',false),
+                'saddel_ok'=>$request->input('saddel_ok',false),
+                'seat_needed'=>$request->input('seat_needed',false),
+                'Seat_needed_plus'=>$request->input('seat_needed_plus', false),
+                'Wheelchairr'=>$request->input('wheelchair', false),
+                'Picture' => $request->input('picture', false),
+                'Bikeview' => $request->input('bike_view',false),
 
 
             ]);

@@ -18,7 +18,6 @@ class BikeAdd extends Model
         'Speeds_number',
         'Breaks_type',
         'Electric_assistance',
-        'Seat_type',
         'Use_solo',
         'Use_duo',
         'Use_several',
@@ -34,7 +33,7 @@ class BikeAdd extends Model
         'seat_needed_plus',
         'wheelchair',
         'Picture',
-        'Bikeview',
+
     ];
 
 
