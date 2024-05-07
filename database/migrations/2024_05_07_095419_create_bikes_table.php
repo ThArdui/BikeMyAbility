@@ -16,11 +16,11 @@ return new class extends Migration
             $table->string('Bike_name', 50);
             $table->string('Description', 500);
             $table->string('Pros', 500);
-            $table->string('Cons', 50);
+            $table->string('Cons', 500);
             $table->integer('Weight');
             $table->boolean('Foldable')->default(false);
             $table->integer('Speeds_number');
-            $table->string('Breaks_type', 50);
+            $table->string('Breaks_type', 250);
             $table->boolean('Electric_assistance')->default(false);
            // $table->string('Seat_type', 50);
 

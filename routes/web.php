@@ -1,4 +1,6 @@
 <?php
+
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\InscriptionController;
@@ -31,10 +33,6 @@ Route::post('/inscription', [InscriptionController::class, 'register']);
 Route::get('/bikesearch', function () {
     return view('bikesearch');
 })->name('bikesearch');
-
-
-
-
 Route::get('/', function () {   // route par défaut de laravel
     return view('welcome');
 });
@@ -43,4 +41,7 @@ route::get('/bikes',function (){
     $bikes=DB::table('bikes')->get();
     return view('index',['bikes'=>$bikes]);
 });
+
+// test christian
+route::get('/resultats-velos',[BikeSearchController::class, 'bikesearch'])->name('bikeSearch');
 
