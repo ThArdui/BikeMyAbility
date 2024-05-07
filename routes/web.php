@@ -27,8 +27,13 @@ Route::get('/resultaddbiketodb', function ()
 // route contrôleur rechherche vélo va changer?
 Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 // routes pour inscription
-Route::get('/inscription', [InscriptionController::class, 'showRegistrationForm'])->name('inscription');
+Route::get('/inscription', [InscriptionController::class, 'showRegistrationForm'])->name('register');
 Route::post('/inscription', [InscriptionController::class, 'register']);
+Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'])->name('checkUserExists');
+//Route pour afficher le formulaire de connexion
+Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [InscriptionController::class, 'login']);
+
 // route vers le formulaire de recherche de velo ok
 Route::get('/bikesearch', function () {
     return view('bikesearch');
