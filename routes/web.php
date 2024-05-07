@@ -10,7 +10,7 @@ Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });// route provisoire vers le formualaire qui potentielllement ajouterai uun vélo à la db
 // route dd resultat de recherche de velo ok
-Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);// yes
+Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 // Route::put('/update-record/{id}', [BikeAddController::class, 'updateRecord']);
 //Route::get('/add-bike', [BikeAddController::class, 'addBike'])->name('bikes.add');
 // route pour s inscrire get et post ok
