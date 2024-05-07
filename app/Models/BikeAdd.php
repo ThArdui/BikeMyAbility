@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BikeAdd extends Model
 {
-    protected $table = 'bikes_table';
+    protected $table = 'bikes';
 
     protected $fillable = [
         'Bike_name',
@@ -22,24 +22,17 @@ class BikeAdd extends Model
         'Use_solo',
         'Use_duo',
         'Use_several',
-        'Uselegs',
-        'Partial_uselegs',
-        'No_legs',
-        'V_good_usearms',
-        'Good__usearms',
-        'Partial_usearms',
-        'No_usearms',
-        'Saddelok',
-        'Partialsaddelok',
-        'Seat_needed',
-        'Seat_needed_plus',
-        'Wheelchair',
-        'Md_good',
-        'Md_partial',
-        'No_md',
-        'Pedalok',
-        'Partialpedal',
-        'Nopedal',
+        'Pedal_legs',
+        'Pedal_arms',
+        'Pedal_arms_legs',
+        'no_pedal',
+'dexterity_good',
+        'dexterity_middel',
+        'no_dexterity',
+        'saddel_ok',
+        'seat_needed',
+        'seat_needed_plus',
+        'wheelchair',
         'Picture',
         'Bikeview',
     ];
