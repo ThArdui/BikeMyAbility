@@ -8,16 +8,15 @@ use App\Models\User;
 
 class InscriptionController extends Controller
 {
-    public function showLoginForm()
+ /*   public function showLoginForm()
     {
         $userExists = false;
 
         return view('auth.login', compact('userExists'));
     }
-
+*/
     public function showRegistrationForm()
     {
-        return view('auth.register');
         $userExists = false;
 
         if ($this->checkUserExists(request())) {
@@ -26,7 +25,6 @@ class InscriptionController extends Controller
 
         return view('auth.register', compact('userExists'));
     }
-
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
