@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddBikeToDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddBikeToDb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/BikeAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BikeAdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/addbiketodbform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/addbiketodbform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InscriptionController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,20 +163,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/thoma/Desktop/projet fin d'année/BikeMyAbility",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/thoma/Desktop/projet fin d'année/BikeMyAbility&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="PestRunConfigurationType">
       <option name="pestRunnerSettings">
@@ -232,7 +230,14 @@
       <workItem from="1714934596834" duration="6593000" />
       <workItem from="1714984778421" duration="21728000" />
       <workItem from="1715071515487" duration="3721000" />
-      <workItem from="1715077791402" duration="16613000" />
+      <workItem from="1715077791402" duration="18221000" />
+      <workItem from="1715151451937" duration="444000" />
+      <workItem from="1715153563983" duration="866000" />
+      <workItem from="1715170761166" duration="11000" />
+      <workItem from="1715173266753" duration="40000" />
+      <workItem from="1715173380762" duration="7000" />
+      <workItem from="1715246469405" duration="61000" />
+      <workItem from="1715247089320" duration="2998000" />
     </task>
     <servers />
   </component>
@@ -249,5 +254,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/addbiketodbform.blade.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

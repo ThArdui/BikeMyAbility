@@ -8,13 +8,13 @@ use App\Models\User;
 
 class InscriptionController extends Controller
 {
- /*   public function showLoginForm()
-    {
-        $userExists = false;
+    /*   public function showLoginForm()
+       {
+           $userExists = false;
 
-        return view('auth.login', compact('userExists'));
-    }
-*/
+           return view('auth.login', compact('userExists'));
+       }
+   */
     public function showRegistrationForm()
     {
         $userExists = false;
@@ -65,16 +65,16 @@ class InscriptionController extends Controller
         return redirect('/bikesearch')->with('success', 'Inscription réussie !');
     }
 
-public function checkUserExists(Request $request)
-{
-    $email = $request->input('email');
+    public function checkUserExists(Request $request)
+    {
+        $email = $request->input('email');
 
-    $userExists = User::where('email', $email)->exists();
+        $userExists = User::where('email', $email)->exists();
 
-    if ($userExists) {
-        return redirect()->route('login')->with('userExists', true);
-    } else {
-        return redirect()->route('register')->with('userExists', false);
+        if ($userExists) {
+            return redirect()->route('login')->with('userExists', true);
+        } else {
+            return redirect()->route('register')->with('userExists', false);
+        }
     }
-}
 }
