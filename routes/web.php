@@ -7,6 +7,7 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\AddBikeToDb;
 
 use App\Http\Controllers\BikeSearchController;
+
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');

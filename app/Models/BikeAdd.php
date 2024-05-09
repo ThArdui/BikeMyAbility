@@ -31,7 +31,7 @@ class BikeAdd extends Model
         'saddel_ok',
         'seat_needed',
         'seat_needed_plus',
-        'wheelchair',
+        'Wheelchairr',
         'Picture',
 
     ];
