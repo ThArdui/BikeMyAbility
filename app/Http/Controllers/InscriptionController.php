@@ -17,6 +17,7 @@ class InscriptionController extends Controller
 
     public function showRegistrationForm()
     {
+        return view('auth.register');
         $userExists = false;
 
         if ($this->checkUserExists(request())) {
@@ -47,7 +48,14 @@ class InscriptionController extends Controller
             'firstname' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
-        ]);
+            'password_confirmation' => 'required|same:password'
+        ],[
+                'name.required' => 'Le nom est obligatoire',
+                'password_confirmation.required'=> 'Le mot de passe est obligatoire',
+                'password_confirmation.same' => 'Les deux mots de passe doivent correspondre !',
+                'email.unique'=>'cette adresse mail est déja utilisée'
+            ]
+        );
 
         User::create([
             'name' => $request->name,
@@ -55,7 +63,7 @@ class InscriptionController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-
+        return view('auth.result')->with('success', 'Inscription réussie !');
         return redirect('/bikesearch')->with('success', 'Inscription réussie !');
     }
 
