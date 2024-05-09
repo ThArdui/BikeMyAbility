@@ -13,14 +13,14 @@
 <div class='container'>
     <header>
         <!-- Inclure la barre de navigation -->
-        @include('navbar')
-    </header>
+@include('navBar')
+         </header>
     <main>
         <h1>@yield('titre1')</h1>
         @yield('contenu')
     </main>
     <footer>
-        <!-- Vous pouvez ajouter du contenu pour le pied de page ici si nécessaire -->
+        @include('footer')
     </footer>
 </div>
 <!-- jQuery and Bootstrap Bundle (includes Popper) -->

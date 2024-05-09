@@ -25,8 +25,7 @@ class InscriptionController extends Controller
 
         return view('auth.register', compact('userExists'));
     }
-    public function login(Request $request)
-    {
+    public function login(Request $request) {
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
