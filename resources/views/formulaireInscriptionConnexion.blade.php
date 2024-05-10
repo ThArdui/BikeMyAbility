@@ -21,7 +21,10 @@
     <input type="text" id="email" name="email" max="255" required>
     <label for="password">Mot de passe</label>
     <input type="password" id="password" name="password" required minlength="8" >
-    <input type="submit" value="S'inscrire">
+        <label for="password_confirmation">Confirmer le mot de passe</label>
+        <input type="password" id="password_confirmation" name="password_confirmation" required>
+
+        <input type="submit" value="S'inscrire">
 </form>
 @endif
 </html>
