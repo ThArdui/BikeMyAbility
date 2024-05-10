@@ -63,7 +63,7 @@ class InscriptionController extends Controller
             'password' => bcrypt($request->password),
         ]);
         return view('auth.result')->with('success', 'Inscription réussie !');
-        return redirect('/rechercer-velos')->with('success', 'Inscription réussie !');
+        return redirect('/rechercher-velos')->with('success', 'Inscription réussie !');
     }
 
     public function checkUserExists(Request $request)
