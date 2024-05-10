@@ -31,7 +31,7 @@ class InscriptionController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect('/bikesearch')->with('success', 'Connection réussie !');
+            return redirect('/rechercher-velos')->with('success', 'Connection réussie !');
         }
 
         // Authentication failed, redirect back with error message
@@ -63,7 +63,7 @@ class InscriptionController extends Controller
             'password' => bcrypt($request->password),
         ]);
         return view('auth.result')->with('success', 'Inscription réussie !');
-        return redirect('/bikesearch')->with('success', 'Inscription réussie !');
+        return redirect('/rechercer-velos')->with('success', 'Inscription réussie !');
     }
 
     public function checkUserExists(Request $request)
