@@ -6,6 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/app/Models/BikeAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BikeAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/veloplustest.blade.php" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/projet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/projet.blade.php" afterDir="false" />
+>>>>>>> c2a40ae86b644e2aa02117e9fc37431e9e640ccd
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> 010fd1c20384bb95d345e5aa8cb39debe73478af
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,8 +251,21 @@
       <workItem from="1715173266753" duration="40000" />
       <workItem from="1715173380762" duration="7000" />
       <workItem from="1715246469405" duration="61000" />
+<<<<<<< HEAD
+      <workItem from="1715247089320" duration="4172000" />
+      <workItem from="1715255388221" duration="32000" />
+      <workItem from="1715257788182" duration="1704000" />
+      <workItem from="1715259679825" duration="2489000" />
+      <workItem from="1715262237063" duration="1100000" />
+      <workItem from="1715267184695" duration="3458000" />
+=======
       <workItem from="1715247089320" duration="2998000" />
+<<<<<<< HEAD
       <workItem from="1715252006324" duration="11690000" />
+=======
+      <workItem from="1715252006324" duration="8534000" />
+>>>>>>> c2a40ae86b644e2aa02117e9fc37431e9e640ccd
+>>>>>>> 010fd1c20384bb95d345e5aa8cb39debe73478af
     </task>
     <servers />
   </component>
