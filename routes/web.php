@@ -47,12 +47,7 @@ Route::get('/bikesearch', function () {
 Route::get('/', function () {   // route par défaut de laravel
     return view('welcome');
 });
-// route vers table bike encore utile?
-route::get('/bikes',function (){
-    $bikes=DB::table('bikes')->get();
-    return view('index',['bikes'=>$bikes]);
-});
 
-// test christian
+// test christian ok
 route::get('/resultats-velos',[BikeSearchController::class, 'bikesearch'])->name('bikeSearch');
 
