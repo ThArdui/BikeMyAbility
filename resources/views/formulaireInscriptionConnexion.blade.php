@@ -1,6 +1,6 @@
 <html>
-<h1>Connectez vous ou creez un compte utilisateur</h1>
 @if ($userExists)
+    <h1>Connectez vous</h1>
     <form method="post" action="{{ route('login') }}">
         @csrf
         <label for="email">Email</label>
@@ -10,8 +10,8 @@
         <input type="submit" value="Se connecter">
     </form>
 @else
-
-<form method="post" action="{{ route('register') }}">
+    <h1>Inscrivez vous</h1>
+    <form method="post" action="{{ route('register') }}">
     @csrf
     <label for="name">Nom</label>
     <input type="text" id="name" name="name" max="255" required>

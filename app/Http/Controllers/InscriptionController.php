@@ -10,20 +10,20 @@ class InscriptionController extends Controller
 {
     public function showLoginForm()
     {
-        $userExists = false; // Initialisez la variable
-        return view('login', compact('userExists'));
+        $userExists = true; // Initialisez la variable
+        return view('formulaireInscriptionConnexion', compact('userExists'));
     }
 
     public function showRegistrationForm()
     {
-        return view('auth.register');
         $userExists=false;
+        return view('formulaireInscriptionConnexion', compact('userExists'));
 
         if ($this->checkUserExists(request())) {
             $userExists = true;
         }
 
-        return view('auth.register', compact('userExists'));
+        return view('formulaireInscriptionConnexion', compact('userExists'));
     }
 
 

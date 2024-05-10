@@ -10,7 +10,7 @@
     <input type="submit" value="Se connecter">
 </form>
 @else
-<h1>Créez un compte utilisateur</h1>
+<h1>Inscrivez vous</h1>
 <form method="post" action="{{ route('register') }}">
     @csrf
     <label for="name">Nom</label>
