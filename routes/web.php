@@ -8,6 +8,11 @@ use App\Http\Controllers\AddBikeToDb;
 
 use App\Http\Controllers\BikeSearchController;
 
+use App\Http\Controllers\HomeController;
+//route vers le homepage. Ca devrait etre la route principale je pense.
+Route::get('/homepage', [HomeController::class, 'index']);
+
+
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
