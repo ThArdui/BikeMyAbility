@@ -17,8 +17,8 @@ Route::get('/homepage', [HomeController::class, 'index']);
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });
-// route vers le contrôleur qui gère la reecherche de vélos, va changer??
-Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);// yes
+// route vers le contrôleur qui gère la recherche de vélos:
+Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 
 
 // route vers contrôleur ajout d'un vélo à la db, va changer?
@@ -29,9 +29,6 @@ Route::get('/resultaddbiketodb', function ()
     return view('resultaddbiketodb');
 })->name('resultaddbiketodb');
 
-
-// route contrôleur rechherche vélo va changer?
-Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 // routes pour inscription
 Route::get('/inscription', [InscriptionController::class, 'showRegistrationForm'])->name('register');
 Route::post('/inscription', [InscriptionController::class, 'register']);
