@@ -6,9 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="4a919fa1-0897-4b6e-b5a0-0ede213e2980" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddBikeToDb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddBikeToDb.php" afterDir="false" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/Models/BikeAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BikeAdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/addbiketodbform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/addbiketodbform.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/veloplustest.blade.php" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/resources/views/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homepage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navBar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/template/projet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/template/projet.blade.php" afterDir="false" />
+>>>>>>> c2a40ae86b644e2aa02117e9fc37431e9e640ccd
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+>>>>>>> 010fd1c20384bb95d345e5aa8cb39debe73478af
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +180,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/thoma/Desktop/projet fin d'année/BikeMyAbility",
     "node.js.detected.package.eslint": "true",
@@ -232,7 +244,28 @@
       <workItem from="1714934596834" duration="6593000" />
       <workItem from="1714984778421" duration="21728000" />
       <workItem from="1715071515487" duration="3721000" />
-      <workItem from="1715077791402" duration="16613000" />
+      <workItem from="1715077791402" duration="18221000" />
+      <workItem from="1715151451937" duration="444000" />
+      <workItem from="1715153563983" duration="866000" />
+      <workItem from="1715170761166" duration="11000" />
+      <workItem from="1715173266753" duration="40000" />
+      <workItem from="1715173380762" duration="7000" />
+      <workItem from="1715246469405" duration="61000" />
+<<<<<<< HEAD
+      <workItem from="1715247089320" duration="4172000" />
+      <workItem from="1715255388221" duration="32000" />
+      <workItem from="1715257788182" duration="1704000" />
+      <workItem from="1715259679825" duration="2489000" />
+      <workItem from="1715262237063" duration="1100000" />
+      <workItem from="1715267184695" duration="3458000" />
+=======
+      <workItem from="1715247089320" duration="2998000" />
+<<<<<<< HEAD
+      <workItem from="1715252006324" duration="11690000" />
+=======
+      <workItem from="1715252006324" duration="8534000" />
+>>>>>>> c2a40ae86b644e2aa02117e9fc37431e9e640ccd
+>>>>>>> 010fd1c20384bb95d345e5aa8cb39debe73478af
     </task>
     <servers />
   </component>
@@ -249,5 +282,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/addbiketodbform.blade.php</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

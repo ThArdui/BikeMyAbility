@@ -26,8 +26,8 @@ class InscriptionController extends Controller
         return view('auth.register', compact('userExists'));
     }
 
-    public function login(Request $request)
-    {
+
+    public function login(Request $request) {
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
@@ -66,16 +66,16 @@ class InscriptionController extends Controller
         return redirect('/bikesearch')->with('success', 'Inscription réussie !');
     }
 
-public function checkUserExists(Request $request)
-{
-    $email = $request->input('email');
+    public function checkUserExists(Request $request)
+    {
+        $email = $request->input('email');
 
-    $userExists = User::where('email', $email)->exists();
+        $userExists = User::where('email', $email)->exists();
 
-    if ($userExists) {
-        return redirect()->route('login')->with('userExists', true);
-    } else {
-        return redirect()->route('register')->with('userExists', false);
+        if ($userExists) {
+            return redirect()->route('login')->with('userExists', true);
+        } else {
+            return redirect()->route('register')->with('userExists', false);
+        }
     }
-}
 }
