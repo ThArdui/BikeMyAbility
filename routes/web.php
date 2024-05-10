@@ -1,6 +1,6 @@
 <?php
 
-use Database\Seeders\DatabaseSeeder;
+//use Database\Seeders\DatabaseSeeder;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\InscriptionController;

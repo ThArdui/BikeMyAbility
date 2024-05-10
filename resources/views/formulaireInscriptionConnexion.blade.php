@@ -20,7 +20,7 @@
     <label for="email">Email - example : nom@example.com</label>
     <input type="text" id="email" name="email" max="255" required>
     <label for="password">Mot de passe</label>
-    <input type="password" id="password" name="password" required minlenght="8">
+    <input type="password" id="password" name="password" required minlength="8" >
     <input type="submit" value="S'inscrire">
 </form>
 @endif
