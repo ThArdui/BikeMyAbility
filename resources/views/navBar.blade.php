@@ -7,9 +7,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="homepage.blade.php">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Se connecter</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">S'inscrire</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a class="nav-link" href="homepage.blade.php">Accueil</a></li>
+                <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link" href="{{ route('login') }}">Se connecter</a></li>
+                <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link" href="{{ route('register') }}">S'inscrire</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Nous contacter</a></li>
                 <li class="nav-item"><a class="nav-link" href="">B2B?</a></li>
                 <li class="nav-item"><a class="nav-link" href="">Forum?</a></li>
