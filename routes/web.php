@@ -7,7 +7,7 @@ use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\AddBikeToDb;
 
 use App\Http\Controllers\BikeSearchController;
-
+use  Illuminate\Database\Eloquent;
 use App\Http\Controllers\HomeController;
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
@@ -19,7 +19,7 @@ Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });
 // route vers le contrôleur qui gère la recherche de vélos:
-Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
+Route::get('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 
 
 // route vers contrôleur ajout d'un vélo à la db, va changer?
@@ -39,13 +39,11 @@ Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('log
 Route::post('/login', [InscriptionController::class, 'login']);
 
 // route vers le formulaire de recherche de velo ok
-Route::get('/bikesearch', function () {
-    return view('bikesearch');
-})->name('bikesearch');
+//Route::get('/searchbikes',[BikeSearchController::class, 'SearchBikes']);
+//Route::get('/searchbike', [BikeSearchController::class, 'ShowForm']);
 Route::get('/', function () {   // route par défaut de laravel
     return view('welcome');
 });
-
-// test christian ok
-route::get('/resultats-velos',[BikeSearchController::class, 'bikesearch'])->name('bikeSearch');
+Route::get('/searchbike', [BikeSearchController::class , 'showForm']);
+Route::post('/searchbikes', [BikeSearchController:: class, 'searchBikes']);
 
