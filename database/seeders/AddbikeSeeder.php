@@ -13,10 +13,10 @@ class AddbikeSeeder extends Seeder
      */
     public function run(): void
     {
-        $bikesToAdd =
+       $bikesToAdd =
             [
                 [
-                    'Bike_name' => 'Easy Rider',
+                    'Bike_name' => 'Easy Rider Test',
                     'Description' => 'Le Easy Rider est un tricycle confortable conçu pour les adultes, offrant une conduite stable et sûre.',
                     'Pros' => 'Conception ergonomique pour un confort optimal;Stabilité accrue grâce à trois roues;Convient aux personnes de tous âges',
                     'Cons' => 'Peut être encombrant dans les espaces restreints',
@@ -45,6 +45,7 @@ class AddbikeSeeder extends Seeder
 
 
             ];
+
         foreach ($bikesToAdd as $bikeData) {
             BikeAdd::create($bikeData);
         }

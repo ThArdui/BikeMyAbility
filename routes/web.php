@@ -9,6 +9,7 @@ use App\Http\Controllers\AddBikeToDb;
 use App\Http\Controllers\BikeSearchController;
 
 use App\Http\Controllers\HomeController;
+
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeController::class, 'index']);
 
