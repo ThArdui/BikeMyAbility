@@ -41,7 +41,7 @@ Route::get('/bikesearch', function () {
     return view('bikesearch');
 })->name('bikesearch');
 Route::get('/', function () {   // route par défaut de laravel
-    return view('welcome');
+    return view('homepage');
 });
 // route vers table bike encore utile?
 route::get('/bikes',function (){
