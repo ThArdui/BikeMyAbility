@@ -1,9 +1,10 @@
 <?php
 
-    namespace App\Http\Controllers;
+    namespace App\Http\Controllers\old;
 
+    use App\Http\Controllers\Controller;
+    use App\Models\Bike;
     use Illuminate\Http\Request;
-    use App\Models\BikeAdd;
 
     class AddBikeToDb extends Controller
     {
@@ -65,7 +66,7 @@
 
             ]);
 
-            $newBike=BikeAdd::create([
+            $newBike=Bike::create([
                 'Bike_name' => $request->input('bike_name'),
                 'Description' => $request->input('description'),
                 'Pros' => $request->input('pros'),

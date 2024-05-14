@@ -1,14 +1,12 @@
 <?php
 
 //use Database\Seeders\DatabaseSeeder;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\InscriptionController;
-use App\Http\Controllers\AddBikeToDb;
-
 use App\Http\Controllers\BikeSearchController;
-
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\old\AddBikeToDb;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeController::class, 'index']);

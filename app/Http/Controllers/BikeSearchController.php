@@ -2,27 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\BikeSearch;
+use App\Models\Bike;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\Str;
 
 class BikeSearchController extends controller
 {
     public function bikesearch(Request $request)
     {
+        $fieldsUsed = false;
         // Récupérez les critères de recherche depuis la requête
         $searchCriteria = $request->all();
+
+        //dd($searchCriteria["utility[0]"]);
         // Construisez la requête pour rechercher les vélos correspondants
-        $query = BikeSearch::query();
+        $bikes = Bike::query();
         // Ajoutez des conditions pour chaque critère de recherche
-        if (isset($searchCriteria['Use_solo'])) {
-            $query->where('Use_solo', true);
+        if (isset($searchCriteria['utility'])) {
+            if (in_array('solo', $searchCriteria['utility'])) {
+                $bikes->where('Bike_use', 'solo');
+            }
+            if (in_array('duo', $searchCriteria['utility'])) {
+                $bikes->orWhere('Bike_use', 'duo');
+            }
+            if (in_array('several', $searchCriteria['utility'])) {
+                $bikes->orWhere('Bike_use', 'several');
+            }
+            $fieldsUsed = true;
         }
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
-        $results = $query->get();
+        if($fieldsUsed) {
+            $results = $bikes->get();
+        }
+        else{
+            $results = collect();
+        }
         // Passez les résultats à la vue
         return view('results-bikes', ['results' => $results]);
     }
