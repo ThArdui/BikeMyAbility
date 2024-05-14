@@ -1,23 +1,33 @@
 <?php
 
 //use Database\Seeders\DatabaseSeeder;
+<<<<<<< HEAD
 use App\Http\Controllers\BikeSearchController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\old\AddBikeToDb;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+=======
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\AddBikeToDb;
+use App\Http\Controllers\HomeController;
+
+use App\Http\Controllers\BikeSearchController;
+use  Illuminate\Database\Eloquent;
+>>>>>>> 542e10357fbc5fd67f1e69bdce658d87e57a4299
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeController::class, 'index']);
-
 
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });
 // route vers le contrôleur qui gère la recherche de vélos:
-Route::post('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
+Route::get('/rechercher-velos', [BikeSearchController::class, 'bikesearch']);
 
 
 // route vers contrôleur ajout d'un vélo à la db, va changer?
@@ -36,19 +46,19 @@ Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'
 Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [InscriptionController::class, 'login']);
 
-// route vers le formulaire de recherche de velo ok
-Route::get('/bikesearch', function () {
-    return view('bikesearch');
-})->name('bikesearch');
+
 Route::get('/', function () {   // route par défaut de laravel
     return view('homepage');
+<<<<<<< HEAD
 });
 // route vers table bike encore utile?
 route::get('/bikes',function (){
     $bikes=DB::table('bikes')->get();
     return view('index',['bikes'=>$bikes]);
+=======
+>>>>>>> 542e10357fbc5fd67f1e69bdce658d87e57a4299
 });
-
-// test christian
-route::get('/resultats-velos',[BikeSearchController::class, 'bikesearch'])->name('bikeSearch');
+// route vers le formulaire de recherche de velo ( pas encore regle christian)
+Route::get('/searchbike', [BikeSearchController::class , 'showForm']);
+Route::post('/searchbikes', [BikeSearchController:: class, 'searchBikes']);
 
