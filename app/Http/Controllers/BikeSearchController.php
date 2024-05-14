@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Http\Request;
 use App\Models\Bike;
-use Illuminate\Http\Request;
-use App\Models\Bikes;
-use App\Models\BikeSearch;
-use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
@@ -48,9 +45,6 @@ class BikeSearchController extends controller
         else{
             $results = collect();
         }
-        // Passez les résultats à la vue
-        $keyBike = $request->input('physique'); // Remplacez 'keyword' par le nom du champ de recherche dans votre formulaire
-        $results = Bikes::where('name', "description")->get(); // Remplacez 'name' par le nom de la colonne dans votre table
         return view('results-bikes', ['results' => $results]);
     }
 

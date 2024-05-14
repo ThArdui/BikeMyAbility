@@ -11,7 +11,7 @@
 <body>
 <div class="container">
     <h1 class="text-center"> Trouvez votre vélo idéal</h1>
-<form action="{{route('BikeSearch')}}" method="get">
+<form action="{{url('rechercher-velos')}}" method="get">
     @csrf
     <fieldset>
         <legend> Votre type d'handicap</legend>

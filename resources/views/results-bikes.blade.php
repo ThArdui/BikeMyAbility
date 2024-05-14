@@ -6,17 +6,15 @@
         <!-- Affichez d'autres attributs du vélo -->
     @endforeach
 </ul>
-<<<<<<< HEAD
 @foreach($results as $bike)
     <div class="cadre-velo">
         <img src="{{$bike->Picture}}" alt="{{$bike->Bike_name}}">
         <p>{{$bike->Description}}</p>
-       {{--
-        <a href="{{route('bike.detail',$bikes->id)}}">
-            <i class="fas fa-arrow-right"></i>
-        </a>
-        --}}
+        {{--
+         <a href="{{route('bike.detail',$bikes->id)}}">
+             <i class="fas fa-arrow-right"></i>
+         </a>
+         --}}
     </div>
-=======
->>>>>>> 542e10357fbc5fd67f1e69bdce658d87e57a4299
 
+@endforeach
