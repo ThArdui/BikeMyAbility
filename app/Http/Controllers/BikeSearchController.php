@@ -24,18 +24,24 @@ class BikeSearchController extends controller
 
         $bikes = Bike::query();
 
+
         if (isset($searchCriteria['utility'])) {
-            if (in_array('solo', $searchCriteria['utility'])) {
+            $utility = (array) $searchCriteria['utility'];
+
+            if (in_array('solo', $utility)) {
                 $bikes->where('Bike_use', 'solo');
+                $fieldsUsed = true;
             }
-            if (in_array('duo', $searchCriteria['utility'])) {
+            if (in_array('duo', $utility)) {
                 $bikes->orWhere('Bike_use', 'duo');
+                $fieldsUsed = true;
             }
-            if (in_array('several', $searchCriteria['utility'])) {
+            if (in_array('several', $utility)) {
                 $bikes->orWhere('Bike_use', 'several');
+                $fieldsUsed = true;
             }
-            $fieldsUsed = true;
         }
+        
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
