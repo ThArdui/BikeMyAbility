@@ -38,40 +38,39 @@
     <fieldset>
         <legend> Assistance electrique </legend>
         <p>
-            <label for="assistance_electric">oui</label>
-            <input id="assistance_electric" name="handicap[]" type="checkbox" value="oui_assistance_electric" >
-            <label for="assistance_electric">non</label>
-            <input id="assistance_electric" name="handicap[]" type="checkbox" value="non_assistance_electric" >
+
+            <input id="assistance_electric_yes" name="electrical_assistance" type="radio" value="oui_assistance_electric" > <label for="assistance_electric_yes" aria-label="Oui assistance electrique">Oui</label>
+
+            <input id="assistance_electric_no" name="electrical_assistance" type="radio" value="non_assistance_electric" ><label for="assistance_electric_no" aria-label= "Non assistance electrique">Non</label>
         </p>
     </fieldset>
     <fieldset>
         <legend> Comment souhaitez-vous vivre votre plaisir cyclable?</legend>
-        <p> <input id="solo" type="checkbox" name="utility[]" value="solo">
-            <label for="solo"> En solo</label>
-        </p>
-        <p>  <input  id="duo" type="checkbox" name="utility[]" value="duo"><label for="duo"> En duo</label>
+
+        <p> <input type="radio" id="solo" name="utility" value="solo"> <label for="solo"> En solo </label> </p>
+
+        <p>  <input  id="duo" type="radio" name="utility" value="duo"><label for="duo"> En duo</label>
         </p>
         <p>
-            <input  id="several " type="checkbox" name="utility[]" value="several">
-            <label for="several ">À plusieurs</label>
+            <input  id="several " type="radio" name="utility" value="several"> <label for="several ">À plusieurs</label>
         </p>
     </fieldset>
     <fieldset>
         <legend> Pédalage </legend>
         <p>
-            <input id="pedal_legs" type="checkbox" name="pedal[]" value="pedal_legs" >
+            <input id="pedal_legs" type="radio" name="pedal" value="pedal_legs" >
             <label for="pedal_legs">Je sais pédaler avec mes jambes</label>
         </p>
         <p>
-            <input id="pedal_arms" type="checkbox" name="pedal[]" value="pedal_arms" >
+            <input id="pedal_arms" type="radio" name="pedal" value="pedal_arms" >
             <label for="pedal_arms">Je sais pédaler avec mes bras</label>
         </p>
         <p>
-           <input id="pedal_arms_legs" type="checkbox" name="pedal[]" value="pedal_arms_legs" >
+           <input id="pedal_arms_legs" type="radio" name="pedal" value="pedal_arms_legs" >
             <label for="pedal_arms_legs">Je sais pédaler avec mes jambes et avec mes bras</label>
        </p>
         <p>
-    <input id="no_pedal" type="checkbox" name="pedal[]" value="no_pedal" >
+    <input id="no_pedal" type="radio" name="pedal" value="no_pedal" >
             <label for="no_pedal">  Auccun des deux</label>
 </p>
     </fieldset>
@@ -107,13 +106,13 @@
     </fieldset>
     <fieldset>
         <legend> Hauteur du cadre</legend>
-        <p> <input id="frame_hight" type="checkbox" name="frame_height" value="frame_hight">
+        <p> <input id="frame_hight" type="radio" name="frame_height" value="frame_hight">
             <label for="frame_hight"> Cadre haut </label>
         </p>
-        <p> <input id="frame_low" type="checkbox" name="frame_height" value="frame_low">
+        <p> <input id="frame_low" type="radio" name="frame_height" value="frame_low">
             <label for="frame_low"> Cadre bas </label>
         </p>
-        <p> <input id="frame_anyway" type="checkbox" name="frame_height" value="frame_anyway">
+        <p> <input id="frame_anyway" type="radio" name="frame_height" value="frame_anyway">
             <label for="frame_anyway">Peu importe </label>
         </p>
     </fieldset>
