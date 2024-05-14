@@ -5,14 +5,13 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\AddBikeToDb;
+use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\BikeSearchController;
 use  Illuminate\Database\Eloquent;
-use App\Http\Controllers\HomeController;
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeController::class, 'index']);
-
 
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
@@ -38,12 +37,11 @@ Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'
 Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [InscriptionController::class, 'login']);
 
-// route vers le formulaire de recherche de velo ok
-//Route::get('/searchbikes',[BikeSearchController::class, 'SearchBikes']);
-//Route::get('/searchbike', [BikeSearchController::class, 'ShowForm']);
+
 Route::get('/', function () {   // route par défaut de laravel
-    return view('welcome');
+    return view('homepage');
 });
+// route vers le formulaire de recherche de velo ( pas encore regle christian)
 Route::get('/searchbike', [BikeSearchController::class , 'showForm']);
 Route::post('/searchbikes', [BikeSearchController:: class, 'searchBikes']);
 
