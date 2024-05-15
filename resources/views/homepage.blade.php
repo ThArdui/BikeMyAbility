@@ -6,7 +6,7 @@
 @endsection
 
 @section('contenu')
-@include('bikesearch')
+
 @endsection
 @section('footer')
     @include('footer')
