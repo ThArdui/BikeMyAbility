@@ -23,7 +23,7 @@ class BikeSearchController extends controller
         //dd($searchCriteria["utility[0]"]);
 
         $bikes = Bike::query();
-
+        if (isset($searchCriteria[]))
 
         if (isset($searchCriteria['utility'])) {
             $utility = (array) $searchCriteria['utility'];
@@ -41,7 +41,7 @@ class BikeSearchController extends controller
                 $fieldsUsed = true;
             }
         }
-        
+
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
