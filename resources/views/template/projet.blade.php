@@ -13,12 +13,10 @@
 <body id="top">
 <div class='container'>
     <header>
-        <!-- Inclure la barre de navigation -->
-@include('navBar')
+            @include('navBar')
          </header>
     <main id="content">
-        <h1>@yield('titre1')</h1>
-        @yield('contenu')
+        @yield('content')
     </main>
     <footer>
         @include('footer')

@@ -1,19 +1,24 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Votre titre</title>
-    <!-- Inclure Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container mt-5">
+@extends('template.projet')
+@section('titre')
     @if ($userExists)
-        <h1 class="text-center">Connectez-vous</h1>
+        Connectez-vous !
+    @else
+        Inscrivez-vous !
+    @endif
+@endsection
+@section('content')
+    <div class="container mt-5">
+        @section('titre1')
+            @if ($userExists)
+                Connectez-vous pour avoir access a votre espace utilisateur !
+            @else
+                Inscrivez-vous pour avoir access a notre base des donnes !
+            @endif
+        @endsection
+        <h1 class="text-center">@yield('titre1')</h1>
+    @if ($userExists)
         <form method="post" action="{{ route('login') }}" class="col-md-6 mx-auto">
             @else
-                <h1 class="text-center">Inscrivez-vous</h1>
                 <form method="post" action="{{ route('register') }}" class="col-md-6 mx-auto">
                     @endif
                     @csrf
@@ -40,8 +45,6 @@
                     <button type="submit" class="btn btn-primary">S'inscrire</button>
                 </form>
 </div>
-
-<!-- Inclure Bootstrap JS (facultatif si vous n'utilisez pas de fonctionnalités JS de Bootstrap) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+@section('footer')
+    @include('footer')
+@endsection

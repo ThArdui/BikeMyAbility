@@ -1,12 +1,12 @@
 @extends('template.projet')
 
-@section('titre', 'Trouvez votre vélo idéal - BikemyAbility')
+@section('titre', 'BikemyAbility')
 @section('navbar')
     @include('navBar')
 @endsection
 
 @section('contenu')
-
+@include('bienvenu')
 @endsection
 @section('footer')
     @include('footer')
