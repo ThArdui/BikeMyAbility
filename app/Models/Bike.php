@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BikeAdd extends Model
+class Bike extends Model
 {
-    protected $table = 'bikes';
+    use HasFactory;
+
+    //protected $table = 'bikes';
 
     protected $fillable = [
         'Bike_name',
@@ -28,6 +31,4 @@ class BikeAdd extends Model
 
 
     ];
-
-
 }

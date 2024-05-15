@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Bike;
 use Illuminate\Database\Seeder;
-use  App\Models\BikeAdd;
 
 class AddbikeSeeder extends Seeder
 {
@@ -118,7 +117,7 @@ class AddbikeSeeder extends Seeder
 
 
         foreach ($bikesToAdd as $bikeData) {
-            BikeAdd::create($bikeData);
+            Bike::create($bikeData);
         }
     }
 }

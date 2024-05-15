@@ -52,7 +52,8 @@ class InscriptionController extends Controller
                 'name.required' => 'Le nom est obligatoire',
                 'password_confirmation.required'=> 'Le mot de passe est obligatoire',
                 'password_confirmation.same' => 'Les deux mots de passe doivent correspondre !',
-                'email.unique'=>'cette adresse mail est déja utilisée'
+                'email.unique'=>'cette adresse mail est déja utilisée',
+                'firstname.required' => 'le prénom est obligatoire'
             ]
         );
 
