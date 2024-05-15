@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 @if ($userExists)
 <h1>Connectez vous!</h1>
 <form method="POST" action="{{ route('login') }}">
