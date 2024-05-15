@@ -19,7 +19,10 @@ Route::get('/biketodbform',function (){
 });
 // route vers le contrôleur qui gère la recherche de vélos:
 Route::get('/rechercher-velos', [BikeSearchController::class, 'SearchBikes']);
-
+Route::get('/bikesearch',function ()
+{
+    return view('bikesearch');
+});
 
 // route vers contrôleur ajout d'un vélo à la db, va changer?
 Route::post('/add-bike-db', [AddBikeToDb::class,'Add_Bike_To_Db'])->name('add-bike-db');

@@ -23,7 +23,25 @@ class BikeSearchController extends controller
         //dd($searchCriteria["utility[0]"]);
 
         $bikes = Bike::query();
-        if (isset($searchCriteria[]))
+
+        if (isset($searchCriteria['handicap'])) {
+            $disabilityTypes = (array) $searchCriteria['handicap'];
+
+            foreach ($disabilityTypes as $disabilityType) {
+                switch ($disabilityType) {
+                    case 'physique':
+                    case 'auditif':
+                    case 'visuel':
+                    case 'cognitif':
+                    case 'mental':
+                        $bikes->orWhere('Disability_type', $disabilityType);
+                        $fieldsUsed = true;
+                        break;
+                }
+            }
+        }
+
+
 
         if (isset($searchCriteria['utility'])) {
             $utility = (array) $searchCriteria['utility'];
