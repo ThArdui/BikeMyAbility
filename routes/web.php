@@ -2,23 +2,16 @@
 
 //use Database\Seeders\DatabaseSeeder;
 use App\Http\Controllers\BikeSearchController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeControllers;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\old\AddBikeToDb;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
-/*
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\InscriptionController;
-use App\Http\Controllers\AddBikeToDb;
-use App\Http\Controllers\HomeController;
 
-use App\Http\Controllers\BikeSearchController;
 use  Illuminate\Database\Eloquent;
-*/
+
 //route vers le homepage. Ca devrait etre la route principale je pense.
-Route::get('/homepage', [HomeController::class, 'index']);
+Route::get('/homepage', [HomeControllers::class, 'index']);
 
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
