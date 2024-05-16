@@ -39,6 +39,10 @@ class InscriptionController extends Controller
         ]);
     }
 
+    public function signout(Request $request){
+
+    }
+
     public function register(Request $request)
     {
         $request->validate([

@@ -7,7 +7,7 @@
     @endif
 @endsection
 @section('content')
-    <div class="container mt-5">
+    @guest
         @section('titre1')
             @if ($userExists)
                 Connectez-vous pour avoir access a votre espace utilisateur !
@@ -58,7 +58,8 @@
                         <button type="submit" class="btn btn-primary">S'inscrire</button>
                     </form>
             @endif
-    </div>
-    @section('footer')
-        @include('footer')
+        @endguest
+    @auth
+        Se déconnecter.
+    @endauth
     @endsection
