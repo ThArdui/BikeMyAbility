@@ -1,4 +1,4 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-violet-500 mb-2" data-bs-theme="dark">
+<nav id="nav" class="navbar navbar-expand-lg bg-violet mb-2" data-bs-theme="dark">
     <a class="visually-hidden-focusable" href="#content">Aller au contenu</a>
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
