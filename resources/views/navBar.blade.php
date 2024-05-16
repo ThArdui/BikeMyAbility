@@ -17,6 +17,7 @@
                 <li class="nav-item"><a class="nav-link text-light" href="">Forum?</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="">Gallerie photo avec tous les models des velos</a></li>
                 @auth
+                    <li class="nav-item"><a class="nav-link text-light" href="">Rechercher un velo adapté</a></li>
                     <li class="nav-item"><a class="nav-link text-light" href="{{ route('signout') }}">Se déconnecter</a></li>
                 @endauth
             </ul>
