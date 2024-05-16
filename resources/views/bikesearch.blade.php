@@ -1,6 +1,6 @@
 @extends('template.projet')
 @section('titre')
-<title>Trouvez votre vélo idéal - BikemyAbility</title>
+Trouvez votre vélo idéal - BikemyAbility
 @endsection
 @section('content')
     @auth
@@ -70,8 +70,9 @@
     </fieldset>
     <fieldset>
         <legend> Dextérité membres supérieurs</legend>
+        <label for="usearms">Niveau de dextérité des membres supérieurs :</label>
         <select id="usearms" name="usearms" required>
-            <option value="">Dextérité membres supérieurs</option>
+            <option value="">Sélectionnez le niveau de dextérité des membres supérieurs</option>
             <option value="dexterity_good"> La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses… </option>
             <option value="dexterity_average"> La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués. </option>
             <option value="dexterity_difficult"> J’ai du mal à utiliser mes mains</option>
@@ -90,8 +91,9 @@
 </fieldset>
     <fieldset>
         <legend> Equilibre</legend>
+        <label for="balance">Niveau d'équilibre :</label>
         <select id="balance" name="balance" required>
-            <option value=""> Equilibre</option>
+            <option value="">Sélectionnez votre niveau d'équilibre</option>
             <option value="good_balance">Je peux tenir sur une selle</option>
             <option value="seat_needed">J’ai besoin d’être dans un siège</option>
             <option value="seat_with_positioning_elements">J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables </option>

@@ -1,6 +1,6 @@
 @extends('template.projet')
 @section('titre')
-<title>Formulaire d'ajout de vélo à la db </title>
+Formulaire d'ajout de vélo à la db
 @endsection
 @section('content')
 <h1 class="text-center">Ajoutez un vélo :-) </h1>
