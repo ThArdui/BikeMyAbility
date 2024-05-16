@@ -1,6 +1,6 @@
 @extends('template.projet')
 @section('titre')
-    <title>Resultat de votre recherche</title>
+    Resultat de votre recherche
 @endsection
 @section('content')
 <!-- resources/views/results-bike.blade.php -->

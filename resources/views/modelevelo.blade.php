@@ -1,6 +1,6 @@
 @extends('template.projet')
 @section('titre')
-    <title>Model de velo $modelvelo</title>
+    Model de velo $modelvelo
 @endsection
 @section('content')
     <h1>Le velo $modelvelo</h1>
