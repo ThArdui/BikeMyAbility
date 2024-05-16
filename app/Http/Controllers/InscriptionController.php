@@ -40,7 +40,13 @@ class InscriptionController extends Controller
     }
 
     public function signout(Request $request){
+        Auth::logout(); // Déconnexion de l'utilisateur
 
+        // Effacez toutes les sessions en cours
+        $request->session()->invalidate();
+
+        // Redirigez l'utilisateur vers la page de connexion ou une autre page appropriée
+        return redirect('/login');
     }
 
     public function register(Request $request)
@@ -67,7 +73,11 @@ class InscriptionController extends Controller
             'password' => bcrypt($request->password),
         ]);
         return view('auth.result')->with('success', 'Inscription réussie !');
+<<<<<<< HEAD
         return redirect()->route('result')->with('success', 'Inscription réussie !');
+=======
+        return redirect('/bikesearch')->with('success', 'Inscription réussie !');
+>>>>>>> 779f3c3799272280283b9a297372576462838f71
     }
 
     public function checkUserExists(Request $request)

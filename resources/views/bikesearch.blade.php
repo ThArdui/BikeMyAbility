@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Trouvez votre vélo idéal - BikemyAbility</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
+@extends('template.projet')
+@section('titre')
+Trouvez votre vélo idéal - BikemyAbility
+@endsection
+@section('content')
     @auth
     <h1 class="text-center"> Trouvez votre vélo idéal</h1>
 <form action="{{url('rechercher-velos')}}" method="get">
@@ -77,8 +70,9 @@
     </fieldset>
     <fieldset>
         <legend> Dextérité membres supérieurs</legend>
+        <label for="usearms">Niveau de dextérité des membres supérieurs :</label>
         <select id="usearms" name="usearms" required>
-            <option value="">Dextérité membres supérieurs</option>
+            <option value="">Sélectionnez le niveau de dextérité des membres supérieurs</option>
             <option value="dexterity_good"> La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses… </option>
             <option value="dexterity_average"> La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués. </option>
             <option value="dexterity_difficult"> J’ai du mal à utiliser mes mains</option>
@@ -97,8 +91,9 @@
 </fieldset>
     <fieldset>
         <legend> Equilibre</legend>
+        <label for="balance">Niveau d'équilibre :</label>
         <select id="balance" name="balance" required>
-            <option value=""> Equilibre</option>
+            <option value="">Sélectionnez votre niveau d'équilibre</option>
             <option value="good_balance">Je peux tenir sur une selle</option>
             <option value="seat_needed">J’ai besoin d’être dans un siège</option>
             <option value="seat_with_positioning_elements">J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables </option>
@@ -121,13 +116,8 @@
     <input type="submit" class="btn btn-primary" value="Je trouve un vélo qui me convient!">
 </p>
     @endauth
-    @guest<a href="{{ url('login') }}">Veuillez vous authentifer</a>
+    @guest<a href="{{ route('login') }}">Veuillez vous authentifier</a>
 @endguest
 
-
-
 </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</div>
-</body>
-</html>
+    @endsection

@@ -1,3 +1,8 @@
+@extends('template.projet')
+@section('titre')
+    Resultat de votre recherche
+@endsection
+@section('content')
 <!-- resources/views/results-bike.blade.php -->
 <h1>Résultats de la recherche</h1>
 <ul>
@@ -18,3 +23,4 @@
     </div>
 
 @endforeach
+@endsection
