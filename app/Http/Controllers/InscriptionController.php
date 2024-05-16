@@ -17,11 +17,10 @@ class InscriptionController extends Controller
     public function showRegistrationForm()
     {
         $userExists=false;
-        return view('formulaireInscriptionConnexion', compact('userExists'));
 
-        if ($this->checkUserExists(request())) {
+        /*if ($this->checkUserExists(request())) {
             $userExists = true;
-        }
+        }*/
 
         return view('formulaireInscriptionConnexion', compact('userExists'));
     }
@@ -31,13 +30,17 @@ class InscriptionController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect('/rechercher-velos')->with('success', 'Connection réussie !');
+            return redirect('/bikesearch')->with('success', 'Connection réussie !');
         }
 
         // Authentication failed, redirect back with error message
         return back()->withInput()->withErrors([
             'email' => 'Invalid email or password.',
         ]);
+    }
+
+    public function signout(Request $request){
+
     }
 
     public function register(Request $request)
@@ -72,7 +75,6 @@ class InscriptionController extends Controller
         $email = $request->input('email');
 
         $userExists = User::where('email', $email)->exists();
-
         if ($userExists) {
             return redirect()->route('login')->with('userExists', true);
         } else {
