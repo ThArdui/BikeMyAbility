@@ -12,13 +12,13 @@
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link text-light" href="{{ route('login') }}">Se connecter</a></li>
                 <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link text-light" href="{{ route('register') }}">S'inscrire</a></li>
                     @endguest
-                @auth
-                    <li class="nav-item"><a class="nav-link text-light" href="{{ url('signout') }}">Se déconnecter</a></li>
-                @endauth
                     <li class="nav-item"><a class="nav-link text-light" href="">Nous contacter</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="">B2B?</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="">Forum?</a></li>
                 <li class="nav-item"><a class="nav-link text-light" href="">Gallerie photo avec tous les models des velos</a></li>
+                @auth
+                    <li class="nav-item"><a class="nav-link text-light" href="{{ route('signout') }}">Se déconnecter</a></li>
+                @endauth
             </ul>
         </div>
     </div>
