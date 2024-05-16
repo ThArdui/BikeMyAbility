@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formulaire d'ajout de vélo à la db </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
+@extends('template.projet')
+@section('titre')
+<title>Formulaire d'ajout de vélo à la db </title>
+@endsection
+@section('content')
 <h1 class="text-center">Ajoutez un vélo :-) </h1>
 
 <form action="{{route('add-bike-db')}}" method="post">
@@ -244,9 +237,4 @@
 
     <input type="submit" value="Enregistrer dans la base de données!">
 </form>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</body>
-</html>
-1
+@endsection
