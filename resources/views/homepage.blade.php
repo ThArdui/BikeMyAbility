@@ -5,7 +5,7 @@
     @include('navBar')
 @endsection
 
-@section('contenu')
+@section('content')
 @include('bienvenu')
 @endsection
 @section('footer')

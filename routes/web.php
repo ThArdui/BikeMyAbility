@@ -39,7 +39,8 @@ Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'
 //Route pour afficher le formulaire de connexion
 Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [InscriptionController::class, 'login']);
-Route::get('signout', [InscriptionController::class, 'signout']);
+Route::get('signout', [InscriptionController::class, 'signout'])->name('signout');
+
 
 
 Route::get('/', function () {   // route par défaut de laravel
