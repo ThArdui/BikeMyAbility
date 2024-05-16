@@ -24,24 +24,28 @@ class BikeSearchController extends controller
 
         $bikes = Bike::query();
 
-        if (isset($searchCriteria['handicap'])) {
+      /*if (isset($searchCriteria['handicap'])) {
             $disabilityTypes = (array) $searchCriteria['handicap'];
 
             foreach ($disabilityTypes as $disabilityType) {
-                switch ($disabilityType) {
-                    case 'physique':
-                    case 'auditif':
-                    case 'visuel':
-                    case 'cognitif':
-                    case 'mental':
-                        $bikes->orWhere('Disability_type', $disabilityType);
-                        $fieldsUsed = true;
-                        break;
-                }
+                $bikes->orWhere('Disability_type', 'LIKE', '%' . $disabilityType . '%');
+                $fieldsUsed = true;
+            }
+/*
+        if (isset($searchCriteria['electrical_assistance'])) {
+            $electricalAssistance = $searchCriteria['electrical_assistance'];
+
+            if ($electricalAssistance === 'oui_assistance_electric')
+            {
+                $bikes->where('Electrical_assistance', 1);
+                $fieldsUsed = true;
+            } elseif ($electricalAssistance === 'non_assistance_electric') {
+                $bikes->where('Electrical_assistance', 0);
+                $fieldsUsed = true;
             }
         }
 
-
+*/
 
         if (isset($searchCriteria['utility'])) {
             $utility = (array) $searchCriteria['utility'];
@@ -60,6 +64,9 @@ class BikeSearchController extends controller
             }
         }
 
+
+
+
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
@@ -73,5 +80,5 @@ class BikeSearchController extends controller
     }
 
 
-
 }
+
