@@ -63,7 +63,9 @@ class BikeSearchController extends controller
             }
         }
 
-
+if (isset($searchCriteria['pedal ']))
+    $pedal=(array)$searchCriteria['pedal '];
+if (in_array())
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête
