@@ -1,6 +1,6 @@
 @extends('template.projet')
 
-@section('titre', 'BikemyAbility')
+@section('titre', 'Accueil - BikemyAbility')
 @section('navbar')
     @include('navBar')
 @endsection

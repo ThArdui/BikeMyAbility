@@ -40,8 +40,8 @@ Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'
 Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [InscriptionController::class, 'login']);
 Route::get('signout', [InscriptionController::class, 'signout'])->name('signout');
-
-
+//route pour le formulaire de contact:
+Route::post('/contact', [ContactController::class, 'sendMessage'])->name('contact');
 
 Route::get('/', function () {   // route par défaut de laravel
     return view('homepage');
