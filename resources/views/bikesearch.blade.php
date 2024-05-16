@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="container">
+    @auth
     <h1 class="text-center"> Trouvez votre vélo idéal</h1>
 <form action="{{url('rechercher-velos')}}" method="get">
     @csrf
@@ -119,7 +120,9 @@
 <p>
     <input type="submit" class="btn btn-primary" value="Je trouve un vélo qui me convient!">
 </p>
-
+    @endauth
+    @guest<a href="{{ url('login') }}">Veuillez vous authentifer</a>
+@endguest
 
 
 
