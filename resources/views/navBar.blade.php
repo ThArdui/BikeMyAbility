@@ -7,12 +7,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a class="nav-link text-white" href="homepage.blade.php" aria-current="{{ request()->is('/') ? 'page' : '' }}">Accueil</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}" aria-current="{{ request()->is('/') ? 'page' : '' }}"><a class="nav-link text-white" href="{{ url('/homepage') }}">Accueil</a></li>
                 @guest
-                <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('login') }}">Se connecter</a></li>
-                <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('register') }}">S'inscrire</a></li>
+                <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('login') }}" aria-current="{{ request()->is('login') ? 'page' : '' }}">Se connecter</a></li>
+                <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('register') }}" aria-current="{{ request()->is('register') ? 'page' : '' }}">S'inscrire</a></li>
                     @endguest
-                    <li class="nav-item"><a class="nav-link text-white" href="">Nous contacter</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="">B2B?</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="">Forum?</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="">Gallerie photo avec tous les models des velos</a></li>
