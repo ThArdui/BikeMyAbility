@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ContactController extends Controller
 {
@@ -12,6 +13,17 @@ class ContactController extends Controller
         $email = $request->input('email');
         $phone = $request->input('phone');
         $message = $request->input('message');
+        $validator = Validator::make($request->all(), [
+            'nom' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'message' => 'required|string|min:20|max:2500',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
 
         // Ensuite, vous pouvez envoyer le message par e-mail, l'enregistrer en base de données, etc.
 

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 use  Illuminate\Database\Eloquent;
+use App\Http\Controllers\ContactController;
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeControllers::class, 'index']);
@@ -40,8 +41,11 @@ Route::post('/checkUserExists', [InscriptionController::class, 'checkUserExists'
 Route::get('/login', [InscriptionController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [InscriptionController::class, 'login']);
 Route::get('signout', [InscriptionController::class, 'signout'])->name('signout');
-//route pour le formulaire de contact:
+//routes pour le formulaire de contact:
 Route::post('/contact', [ContactController::class, 'sendMessage'])->name('contact');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact_form');
 
 Route::get('/', function () {   // route par défaut de laravel
     return view('homepage');

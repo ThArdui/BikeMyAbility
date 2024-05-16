@@ -13,7 +13,7 @@
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link text-danger" href="{{ route('login') }}" aria-current="{{ request()->is('login') ? 'page' : '' }}">Se connecter</a></li>
                 <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link text-danger" href="{{ route('register') }}" aria-current="{{ request()->is('register') ? 'page' : '' }}">S'inscrire</a></li>
                     @endguest
-                    <li class="nav-item"><a class="nav-link text-danger" href="" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a></li>
+                    <li class="nav-item"><a class="nav-link text-danger" href="{{ route('contact') }}" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a></li>
                 <li class="nav-item"><a class="nav-link text-danger" href="">Forum?</a></li>
                 <li class="nav-item"><a class="nav-link text-danger" href="">B2B?</a></li>
                 <li class="nav-item"><a class="nav-link text-danger" href="">Gallerie photo avec tous les models des velos</a></li>
