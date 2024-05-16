@@ -1,4 +1,4 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-dark mb-2" data-bs-theme="dark">
+<nav id="nav" class="navbar navbar-expand-lg bg-violet-500 mb-2" data-bs-theme="dark">
     <a class="visually-hidden-focusable" href="#content">Aller au contenu</a>
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}" aria-current="{{ request()->is('/') ? 'page' : '' }}"><a class="nav-link text-white" href="{{ url('/homepage') }}">Accueil</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a class="nav-link text-white {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/homepage') }}" aria-current="{{ request()->is('/') ? 'page' : '' }}">Accueil</a></li>
                 @guest
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('login') }}" aria-current="{{ request()->is('login') ? 'page' : '' }}">Se connecter</a></li>
                 <li class="nav-item {{ request()->is('register') ? 'active' : '' }}"><a class="nav-link text-white" href="{{ route('register') }}" aria-current="{{ request()->is('register') ? 'page' : '' }}">S'inscrire</a></li>
