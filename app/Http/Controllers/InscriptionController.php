@@ -31,7 +31,11 @@ class InscriptionController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect('/bikesearch')->with('success', 'Connection réussie !');
+            return redirect()->route('bikesearch')->with('success', 'Connection réussie !');
+        } else {
+            return back()->withErrors([
+                'email' => 'Les informations d\'identification ne correspondent pas à nos enregistrements.',
+            ]);
         }
 
         // Authentication failed, redirect back with error message
