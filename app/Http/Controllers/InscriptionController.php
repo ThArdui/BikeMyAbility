@@ -16,7 +16,7 @@ class InscriptionController extends Controller
 
     public function showRegistrationForm()
     {
-        $userExists=false;
+        $userExists = false;
 
         /*if ($this->checkUserExists(request())) {
             $userExists = true;
@@ -26,7 +26,8 @@ class InscriptionController extends Controller
     }
 
 
-    public function login(Request $request) {
+    public function login(Request $request)
+    {
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
@@ -39,7 +40,8 @@ class InscriptionController extends Controller
         ]);
     }
 
-    public function signout(Request $request){
+    public function signout(Request $request)
+    {
         Auth::logout(); // Déconnexion de l'utilisateur
 
         // Effacez toutes les sessions en cours
@@ -57,11 +59,11 @@ class InscriptionController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
             'password_confirmation' => 'required|same:password'
-        ],[
+        ], [
                 'name.required' => 'Le nom est obligatoire',
-                'password_confirmation.required'=> 'Le mot de passe est obligatoire',
+                'password_confirmation.required' => 'Le mot de passe est obligatoire',
                 'password_confirmation.same' => 'Les deux mots de passe doivent correspondre !',
-                'email.unique'=>'cette adresse mail est déja utilisée',
+                'email.unique' => 'cette adresse mail est déja utilisée',
                 'firstname.required' => 'le prénom est obligatoire'
             ]
         );
@@ -78,13 +80,15 @@ class InscriptionController extends Controller
 
     public function checkUserExists(Request $request)
     {
+        $request->validate([
+            'email' => 'required|email',
+        ]);
         $email = $request->input('email');
-
         $userExists = User::where('email', $email)->exists();
         if ($userExists) {
-            return redirect()->route('login')->with('userExists', true);
+            return redirect()->route('login')->withErrors(['email' => 'L\'adresse email est déjà utilisée.']);
         } else {
-            return redirect()->route('register')->with('userExists', false);
+            return redirect()->route('register')->with('email', $email);
         }
     }
 }

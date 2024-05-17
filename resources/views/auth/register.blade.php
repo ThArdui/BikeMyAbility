@@ -1,4 +1,7 @@
-<html>
+@extends('template.projet')
+@section('titre')
+@endsection
+@section('content')
 @if ($userExists)
 <h1>Connectez vous!</h1>
 <form method="POST" action="{{ route('login') }}">
@@ -20,8 +23,12 @@
     <input type="text" id="firstname" name="firstname" value="{{ old('firstname') }}" required>
 
     <label for="email">Adresse e-mail</label>
-    <input type="email" id="email" name="email" value="{{ old('email') }}" required>
-
+    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') ?? session('email') }}" max="255" required>
+    @error('email')
+    <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+    @enderror
     <label for="password">Mot de passe</label>
     <input type="password" id="password" name="password" minlength="8" required>
 
@@ -31,4 +38,4 @@
     <input type="submit" value="S'inscrire">
 </form>
 @endif
-</html>
+@endsection

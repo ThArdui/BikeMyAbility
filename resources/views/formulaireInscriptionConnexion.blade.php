@@ -43,7 +43,12 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email - exemple : nom@example.com</label>
-                            <input type="email" class="form-control" id="email" name="email" max="255" required>
+                            <input type="email" class="form-control" @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') ?? session('email') }}" max="255" required>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
