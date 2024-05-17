@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 use  Illuminate\Database\Eloquent;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BikeController;
 
 //route vers le homepage. Ca devrait etre la route principale je pense.
 Route::get('/homepage', [HomeControllers::class, 'index']);
@@ -46,6 +47,8 @@ Route::post('/contact', [ContactController::class, 'sendMessage'])->name('contac
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact_form');
+//route vers la gallerie:
+Route::get('/gallerie-des-velos', [BikeController::class, 'index'])->name('gallerie.velos');
 
 Route::get('/', function () {   // route par défaut de laravel
     return view('homepage');

@@ -38,8 +38,27 @@ class BikeController extends Controller
     {
         $request->validate([
             // Ajoutez les règles de validation ici
+            'Bike_name' => 'required|string|max:70',
+            'Description' => 'required|string|max:1500',
+            'Pros' => 'nullable|string',
+            'Cons' => 'nullable|string',
+            'Weight' => 'nullable|numeric|min:0',
+            'Electrical_assistance' => 'nullable|boolean',
+            'Foldable' => 'nullable|boolean',
+            'Speeds_number' => 'integer|min:0',
+            'Brakes_type' => 'string|max:500',
+            'Frame_height' => 'numeric|min:0',
+            'Disability_type' => 'string|max:500',
+            'Bike_use' => 'string|max:500',
+            'Pedal_way' => 'string|max:500',
+            'Dexterity_arms' => 'nstring|max:500',
+            'Balance' => 'string|max:500',
+            'Picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+        if ($request->hasFile('Picture')) {
+            $path = $request->file('Picture')->store('bikes', 'public');
+            $request->merge(['Picture' => $path]);
+        }
         Bike::create($request->all());
 
         return redirect()->route('touslesvelos')

@@ -3,7 +3,7 @@
 Nous contacter!
 @endsection
 @section('content')
-    <h1?Comment nous contacter?</h1>
+    <h1>Comment nous contacter?</h1>
     <p>Si vous voullez nous proposer d'autres velos adaptés ou si vous êtes un revendeur des velos et vous avez envie d'ajouter des velos dans notre base des donnés, envoyez nous un message en utilisant ce formulaire. Un de nos bikers va vous repondre dans le plus bref delai.</p>
     <form method="post" action="{{ route('contact') }}" class="col-md-6 mx-auto">
         @csrf
