@@ -1,9 +1,10 @@
 @extends('template.projet')
 @section('titre')
-    Model de velo $modelvelo
+    Modèle de vélo {{ $bike->Bike_name }}
 @endsection
-@section('content')
-    <h1>Le velo $modelvelo</h1>
-<p> TEST VELO</p>
+    @section('content')
+        <h1>Le vélo {{ $bike->Bike_name }}</h1>
 
+        <p>Description : {{ $bike->Description }}</p>
+        <!-- Ajoutez ici les autres détails du vélo que vous souhaitez afficher -->
 @endsection

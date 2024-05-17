@@ -73,7 +73,7 @@ class BikeController extends Controller
      */
     public function show(Bike $bike)
     {
-        return view('bikes.show', compact('bike'));
+        return view('modelevelo', compact('bike'));
     }
 
     /**

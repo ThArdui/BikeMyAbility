@@ -19,14 +19,16 @@ Route::get('/homepage', [HomeControllers::class, 'index']);
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
 });
+
 // route vers le contrôleur qui gère la recherche de vélos:
 Route::get('/rechercher-velos', [BikeSearchController::class, 'SearchBikes']);
+//Route bikesearch:
 Route::get('/bikesearch',function ()
 {
     return view('bikesearch');
 })->name('bikesearch');
 
-// route vers contrôleur ajout d'un vélo à la db, va changer?
+// route vers contrôleur ajout d'un vélo à la db:
 Route::post('/add-bike-db', [AddBikeToDb::class,'Add_Bike_To_Db'])->name('add-bike-db');
 // Route vers page résuLtat ajout d'un vélo à la db
 Route::get('/resultaddbiketodb', function ()
@@ -49,6 +51,9 @@ Route::get('/contact', function () {
 })->name('contact_form');
 //route vers la gallerie:
 Route::get('/gallerie-des-velos', [BikeController::class, 'index'])->name('gallerie.velos');
+//route vers les details du velo:
+Route::get('/details-velo/{bike}', [BikeController::class, 'show'])->name('details.velo');
+
 
 Route::get('/', function () {   // route par défaut de laravel
     return view('homepage');

@@ -3,20 +3,22 @@
 Gallerie des velos
     @endsection
 @section('content')
-<h1>table bikes</h1>
+<h1>Gallerie photo des velos</h1>
+<p>Sur cette page vous avez la possibilitée de regarder les photos de tous les vélos enregistrés sur notre site.</p>
+<p>Vous pouvez cliquer sur la photo du vélo que vous interesse pour decouvrir les details de ce vélo.</p>
 @if(session('success'))
     <div>
         {{ session('success') }}
     </div>
 @endif
-    <div>
+    <div class="gallery">
 @foreach($bikes as $bike)
-            <div>
-                <h2>{{ $bike->Bike_name }}</h2>
-                <p>{{ $bike->Description }}</p>
+            <div class="bike-item">
                 @if($bike->Picture)
-                    <img src="{{ asset('storage/' . $bike->Picture) }}" alt="{{ $bike->Bike_name }}" style="width:200px;height:auto;">
-                @else
+                    <a href="{{ route('details.velo', $bike->id) }}">
+                        <img src="{{ asset('storage/' . $bike->Picture) }}" alt="{{ $bike->Bike_name }}">
+                    </a
+                    >                @else
                     <p>Pas d'image disponible</p>
                 @endif
             </div>
