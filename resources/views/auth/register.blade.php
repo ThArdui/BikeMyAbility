@@ -4,6 +4,7 @@
 @section('content')
 @if ($userExists)
 <h1>Connectez vous!</h1>
+
 <form method="POST" action="{{ route('login') }}">
     @csrf
     <label for="email">Email</label>
