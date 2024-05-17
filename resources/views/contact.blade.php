@@ -5,7 +5,7 @@ Nous contacter!
 @section('content')
     <h1>Comment nous contacter?</h1>
 
-    <p>Si vous voulez nous proposer d'autres velos adaptés ou si vous êtes un revendeur de vélos et vous avez envie d'en ajouter dans notre base des données, envoyez nous un message en utilisant ce formulaire. Un de nos bikers vous répondra dans les plus brefs délais.</p>
+    <p>Si vous voulez nous proposer d'autres velos adaptés ou si vous êtes un revendeur de vélos et vous avez envie d'en ajouter dans notre base des données, envoyez nous un message en utilisant ce formulaire. Un de nos bikers vous répondra dans les plus brefs délais. </p>
     <p> * Champs obligatoires</p>
     <form method="post" action="{{ route('contact') }}" class="col-md-6 mx-auto">
         @csrf
