@@ -28,7 +28,7 @@ class BikeSearchController extends controller
             $disabilityTypes = (array)$searchCriteria['handicap'];
 
             foreach ($disabilityTypes as $disabilityType) {
-                $bikes->orWhere('Disability_type', 'LIKE', '%' . $disabilityType . '%');
+                $bikes->where('Disability_type', 'LIKE', '%' . $disabilityType . '%');
                 $fieldsUsed = true;
             }
         }
@@ -63,9 +63,19 @@ class BikeSearchController extends controller
             }
         }
 
-if (isset($searchCriteria['pedal ']))
-    $pedal=(array)$searchCriteria['pedal '];
-if (in_array())
+if (isset($searchCriteria['pedal']))
+{
+    $pedal = $searchCriteria['pedal'];
+    $bikes->where('Pedal_way',$pedal);
+    $fieldsUsed = true;
+}
+
+
+if (isset($searchCriteria['Dexterity_arms']))
+{
+    $usearms=$searchCriteria['Dexterity_arms'];
+    $bikes->where('Dexterity_arms',$usearms);
+}
         // Ajoutez d'autres conditions pour les autres critères
 
         // Exécutez la requête

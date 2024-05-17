@@ -64,14 +64,14 @@ Trouvez votre vélo idéal - BikemyAbility
             <label for="pedal_arms_legs">Je sais pédaler avec mes jambes et avec mes bras</label>
        </p>
         <p>
-    <input id="no_pedal" type="radio" name="pedal" value="no_pedal" >
+    <input id="no_pedal" type="radio" name="pedal" value="Auccun des deux" >
             <label for="no_pedal">  Auccun des deux</label>
 </p>
     </fieldset>
     <fieldset>
         <legend> Dextérité membres supérieurs</legend>
         <label for="usearms">Niveau de dextérité des membres supérieurs :</label>
-        <select id="usearms" name="usearms" required>
+        <select id="usearms" name="Dexterity_arms" required>
             <option value="">Sélectionnez le niveau de dextérité des membres supérieurs</option>
             <option value="dexterity_good"> La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses… </option>
             <option value="dexterity_average"> La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués. </option>
