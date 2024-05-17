@@ -1,5 +1,5 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-warning mb-2" data-bs-theme="dark">
-    <a class="navbar-brand text-danger" href="{{ url('/') }}">BIKE MY ABILITY</a>
+<nav id="nav" class="navbar navbar-expand-lg bg-dark mb-2 text-light container-fluid" data-bs-theme="dark">
+<a class="navbar-brand text-danger" href="{{ url('/') }}">BIKE MY ABILITY</a>
     <a class="visually-hidden-focusable"  tabindex="-1" href="#content">Aller au contenu</a>
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
