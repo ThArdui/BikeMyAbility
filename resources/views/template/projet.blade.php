@@ -11,12 +11,13 @@
     @yield('styles')
 </head>
 <body id="top">
+<header>
+    @include('navBar')
+</header>
 <div class='container'>
-    <header>
-            @include('navBar')
-         </header>
+
     <main id="content">
-        @yield('content')
+        @yield  ('content')
     </main>
         @include('footer')
 </div>
