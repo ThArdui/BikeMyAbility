@@ -18,7 +18,7 @@ Route::get('/homepage', [HomeControllers::class, 'index']);
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
 Route::get('/biketodbform',function (){
     return view('addbiketodbform');
-});
+})->name('biketodbform');
 
 // route vers le contrôleur qui gère la recherche de vélos:
 Route::get('/rechercher-velos', [BikeSearchController::class, 'SearchBikes']);
