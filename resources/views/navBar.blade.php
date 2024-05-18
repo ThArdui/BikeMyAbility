@@ -1,14 +1,15 @@
-<nav id="nav" class="navbar navbar-expand-lg bg-dark mb-2 text-light" data-bs-theme="dark">
+<nav id="nav" class="navbar navbar-expand-lg bg-warning mb-2 text-light" data-bs-theme="dark">
     <a class="navbar-brand text-danger" href="{{ url('/') }}">BIKE MY ABILITY</a>
     <a class="visually-hidden-focusable" tabindex="-1" href="#content">Aller au contenu</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-                <a class="nav-link text-danger {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/homepage') }}" aria-current="page">Accueil</a>
+                <a class="nav-link text-danger  {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/homepage') }}" aria-current="page">Accueil</a>
             </li>
             @guest
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
@@ -38,7 +39,6 @@
         </ul>
     </div>
 </nav>
-
 
 
 <!-- <nav id="nav" class="navbar navbar-expand-lg bg-dark mb-2 text-light container-fluid" data-bs-theme="dark">
