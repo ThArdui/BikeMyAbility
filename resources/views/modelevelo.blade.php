@@ -21,7 +21,7 @@
         <p>Équilibre : {{ trim($bike->Balance) }}</p>
         @if($bike->Picture)
             <div>
-                <img src="{{ asset('storage/' . $bike->Picture) }}" alt="Velo {{ $bike->Bike_name }}" style="width:400px;height:auto;">
+                <img src="{ asset('' . $bike->Picture) }}" alt="Velo {{ $bike->Bike_name }}" style="width:400px;height:auto;">
             </div>
         @endif
 @endsection
