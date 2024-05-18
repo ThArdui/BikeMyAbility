@@ -16,9 +16,8 @@ Gallerie des velos
             <div class="bike-item">
                 @if($bike->Picture)
                     <a href="{{ route('details.velo', $bike->id) }}">
-                        <img src="{{ asset('storage/' . $bike->Picture) }}" alt="{{ $bike->Bike_name }}">
-                    </a
-                    >                @else
+                        <img src="{{ asset('' . $bike->Picture) }}" alt="Vélo adapté pour les handicapes: {{ $bike->Disability_type }}. Le nom du vélo est">{{ $bike->Bike_name }}</a>
+                                    @else
                     <p>Pas d'image disponible</p>
                 @endif
             </div>
