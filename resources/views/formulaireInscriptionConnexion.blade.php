@@ -10,59 +10,84 @@
     @guest
         @section('titre1')
             @if ($userExists)
-                Connectez-vous pour avoir accès à votre espace utilisateur !
+                Connectez-vous à votre espace utilisateur !
             @else
-                Inscrivez-vous pour avoir accès à notre base des donnes !
+                Inscrivez-vous  sur Bike My Ability!
             @endif
         @endsection
-        <h1 class="text-center">@yield('titre1')</h1>
+        <h1 class="text-center text-danger-emphasis">@yield('titre1')</h1>
         @if ($userExists)
             <p> * Champs obligatoires</p>
             <form method="post" action="{{ route('login') }}" class="col-md-6 mx-auto">
                 @csrf
                 <div class="form-group">
-                    <label for="email">Email <span aria-hidden="true">* </span> (ex : nom@example.com)</label>
-                    <input type="email" class="form-control" id="email" name="email" max="255" required>
-                </div>
+                    <p>
+                        <label for="email">Email <span aria-hidden="true">* </span> (ex : nom@example.com)</label>
+                        <input type="email" class="form-control" id="email" name="email" max="255" required>
+
+                    </p>
+                                 </div>
                 <div class="form-group">
-                    <label for="password">Mot de passe <span aria-hidden="true">* </span> </label>
-                    <input type="password" class="form-control" id="password" name="password" required
-                           minlength="8">
+                    <p> <label for="password">Mot de passe <span aria-hidden="true">* </span> </label>
+                        <input type="password" class="form-control" id="password" name="password" required
+                               minlength="8"></p>
+
                 </div>
-                <button type="submit" class="btn btn-primary">Se loguer</button>
+
+                <p> <button type="submit" class="btn btn-primary">Se loguer</button> </p>
             </form>
                 @else
             <p> * Champs obligatoires</p>
                     <form method="post" action="{{ route('register') }}" class="col-md-6 mx-auto">
                         @csrf
                         <div class="form-group">
-                            <label for="name">Nom  <span aria-hidden="true">* </span></label>
-                            <input type="text" class="form-control" id="name" name="name" max="255" required>
+                            <p>
+                                <label for="name">Nom  <span aria-hidden="true">* </span></label>
+                                <input type="text" class="form-control" id="name" name="name" max="255" required>
+                            </p>
+
                         </div>
                         <div class="form-group">
-                            <label for="firstname">Prénom <span aria-hidden="true">* </span></label>
-                            <input type="text" class="form-control" id="firstname" name="firstname" max="255" required>
+                            <p>
+                                <label for="firstname">Prénom <span aria-hidden="true">* </span></label>
+                                <input type="text" class="form-control" id="firstname" name="firstname" max="255" required>
+
+                            </p>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email <span aria-hidden="true">* </span>(ex:nom@example.com)</label>
-                            <input type="email" class="form-control" @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') ?? session('email') }}" max="255" required>
-                            @error('email')
-                            <span class="invalid-feedback" role="alert">
+                            <p>
+                                <label for="email">Email <span aria-hidden="true">* </span>(ex:nom@example.com)</label>
+                                <input type="email" class="form-control" @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') ?? session('email') }}" max="255" required>
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
-                            @enderror
+                                @enderror
+                            </p>
+
                         </div>
                         <div class="form-group">
-                            <label for="password">Mot de passe <span aria-hidden="true">* </span> </label>
-                            <input type="password" class="form-control" id="password" name="password" required
-                                   minlength="8">
+                            <p>
+                                <label for="password">Mot de passe <span aria-hidden="true">* </span> </label>
+                                <input type="password" class="form-control" id="password" name="password" required
+                                       minlength="8">
+                            </p>
+
                         </div>
                         <div class="form-group">
-                            <label for="password_confirmation">Confirmer le mot de passe <span aria-hidden="true">* </span> </label>
-                            <input type="password" class="form-control" id="password_confirmation"
-                                   name="password_confirmation" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">S'inscrire</button>
+                            <p>
+                                <label for="password_confirmation">Confirmer le mot de passe <span aria-hidden="true">* </span> </label>
+                                <input type="password" class="form-control" id="password_confirmation"
+                                       name="password_confirmation" required>
+
+
+                            </p>
+                                                    </div>
+                        <p>
+                            <button type="submit" class="btn btn-primary">S'inscrire</button>
+
+                        </p>
+
                     </form>
             @endif
         @endguest

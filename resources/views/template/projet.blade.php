@@ -9,8 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     @yield('styles')
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         main {
-            min-height: 800px;
+            min-height: 750px;
         }
         .visually-hidden-focusable {
             position: absolute;
@@ -32,7 +33,7 @@
         }
     </style>
 </head>
-<body id="top">
+<body id="top" class="bg-light">
 <header>
     <a class="visually-hidden-focusable" tabindex="0" href="#content">Aller au contenu</a>
     @include('navBar')
