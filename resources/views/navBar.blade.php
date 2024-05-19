@@ -1,9 +1,8 @@
 <nav id="nav" class="navbar navbar-expand-lg bg-warning mb-2 text-light" data-bs-theme="dark">
-    <a class="navbar-brand text-danger" href="{{ url('/') }}">BIKE MY ABILITY</a>
-    <a class="visually-hidden-focusable" tabindex="-1" href="#content">Aller au contenu</a>
+    <a class="navbar-brand text-danger ms-5" href="{{ url('/') }}">BIKE MY ABILITY</a>
 
     <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon text-warning"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
