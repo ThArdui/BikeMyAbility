@@ -1,3 +1,4 @@
+<!-- changements thomas -->
 @extends('template.projet')
 @section('titre')
     @if ($userExists)

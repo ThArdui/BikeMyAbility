@@ -9,6 +9,7 @@
 
 @section('content')
     <div class="row">
+        <!-- changements thomas -->
         <div class="col-12 text-center">
             <h1 id="bienvenue" class="text-danger-emphasis"> Bienvenue sur Bike My Ability</h1>
             <p class="fs-1 text-danger-emphasis"> Bike My Ability, roulez vers plus d'autonomie...  </p>

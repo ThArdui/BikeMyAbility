@@ -2,7 +2,7 @@
 @section('titre')
     Gallerie des vélos
 @endsection
-
+<!-- changements thomas -->
 @section('content')
     <h1>Galerie photo </h1>
     <p>Sur cette page vous avez la possibilité de regarder les photos de tous les vélos disponible sur notre site.</p>

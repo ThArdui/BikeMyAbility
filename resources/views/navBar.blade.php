@@ -39,7 +39,7 @@
     </div>
 </nav>
 
-
+<!-- changements thomas -->
 <!-- <nav id="nav" class="navbar navbar-expand-lg bg-dark mb-2 text-light container-fluid" data-bs-theme="dark">
 <a class="navbar-brand text-danger" href="{{ url('/') }}">BIKE MY ABILITY</a>
     <a class="visually-hidden-focusable"  tabindex="-1" href="#content">Aller au contenu</a>
