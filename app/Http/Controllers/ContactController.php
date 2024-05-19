@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class ContactController extends Controller
 {
@@ -23,11 +25,16 @@ class ContactController extends Controller
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+        $details = [
+            'nom' => $request->input('nom'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'message' => $request->input('message'),
+        ];
 
+        // Envoyer l'email
+        Mail::to('carmentodorutz@yahoo.com')->send(new ContactMail($details));
 
-        // Ensuite, vous pouvez envoyer le message par e-mail, l'enregistrer en base de données, etc.
-
-        // Une fois le message traité, vous pouvez rediriger l'utilisateur vers une autre page
         return redirect()->back()->with('success', 'Votre message a été envoyé avec succès!');
     }
 }
