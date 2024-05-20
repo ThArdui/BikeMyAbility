@@ -89,7 +89,6 @@ class BikeSearchController extends controller
 // hauteur de cadre
 
 
-
         // Exécutez la requête
         if ($fieldsUsed) {
             $results = $bikes->get();
@@ -99,3 +98,4 @@ class BikeSearchController extends controller
         return view('results-bikes', ['results' => $results]);
     }
 }
+//test Carmen
