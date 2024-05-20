@@ -20,7 +20,7 @@ class BikeSearchController extends controller
         if (isset($searchCriteria['handicap']) && !empty($searchCriteria['handicap'])) {
             $disabilityTypes = (array)$searchCriteria['handicap'];
            foreach ($disabilityTypes as $disabilityType) {
-                $bikes->where('Disability_type', 'LIKE', '%' . $disabilityType . '%');
+                $bikes = $bikes->where('Disability_type', 'LIKE', '%' . $disabilityType . '%');
                 $fieldsUsed = true;
            }
         }
@@ -29,10 +29,10 @@ class BikeSearchController extends controller
             $electricalAssistance = $searchCriteria['electrical_assistance'];
 
             if ($electricalAssistance === 'oui_assistance_electric') {
-                $bikes->where('Electrical_assistance', 1);
+                $bikes = $bikes->where('Electrical_assistance', 1);
                 $fieldsUsed = true;
             } elseif ($electricalAssistance === 'non_assistance_electric') {
-                $bikes->where('Electrical_assistance', 0);
+                $bikes = $bikes->where('Electrical_assistance', 0);
                 $fieldsUsed = true;
             }
         }
@@ -48,7 +48,7 @@ class BikeSearchController extends controller
         if (isset($searchCriteria['pedal']) && !empty($searchCriteria['pedal'])){
             $pedal= (array)$searchCriteria['pedal'];
         if (count($pedal) > 0) {
-            $bikes->whereIn('Pedal_way',$pedal);
+            $bikes = $bikes->whereIn('Pedal_way',$pedal);
             $fieldsUsed = true;
         }
         }
@@ -63,14 +63,26 @@ class BikeSearchController extends controller
         }
 */
 // type de freinage
-        if (isset($searchCriteria['brakes']) && !empty($searchCriteria['brakes'])) {
-            $brakes = (array)$searchCriteria['brakes'];
+        if (isset($searchCriteria['brakes']) && !empty($searchCriteria['brakes']) && $searchCriteria['brakes']!=="anyway_brakes") {
+            if($searchCriteria['brakes']==='drum_brake'){
+                $bikes = $bikes->where('Brakes_type','Freins à tambours');
+            }
+            if($searchCriteria['brakes']==='coaster_brakes'){
+                $bikes = $bikes->where('Brakes_type','Freins hydrauliques');
+            }
+            if($searchCriteria['brakes']==='disc_brakes'){
+               $bikes = $bikes->where('Brakes_type','Freins à disques');
+            }
+            $fieldsUsed = true;
+        }
+/*            $brakes = (array)$searchCriteria['brakes'];
 
             if (count($brakes) > 0) {
                 $bikes->whereIn('Brakes_type', $brakes);
                 $fieldsUsed = true;
             }
-        }
+        }*/
+
  // aquilibre
 
 
