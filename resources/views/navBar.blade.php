@@ -7,23 +7,27 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
+
             <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-                <a class="nav-link text-danger  {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/homepage') }}" aria-current="page">Accueil</a>
+                <a class="nav-link text-danger {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}" aria-current="{{ request()->is('/') ? 'page' : '' }}">Accueil</a>
             </li>
-            @guest
+
+        @guest
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
-                    <a class="nav-link text-danger" href="{{ route('login') }}">Se connecter</a>
+                    <a class="nav-link text-danger" href="{{ route('login') }}" aria-current="{{ request()->is('login') ? 'page' : '' }}">Se connecter</a>
                 </li>
-                <li class="nav-item {{ request()->is('register') ? 'active' : '' }}">
-                    <a class="nav-link text-danger" href="{{ route('register') }}">S'inscrire</a>
+                <li class="nav-item {{ request()->is('inscription') ? 'active' : '' }}">
+                    <a class="nav-link text-danger {{ request()->is('inscription') ? 'active' : '' }}" href="{{ route('register') }}" aria-current="{{ request()->is('inscription') ? 'page' : '' }}">S'inscrire</a>
                 </li>
+
             @endguest
             <li class="nav-item">
                 <a class="nav-link text-danger" href="{{ route('contact') }}" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-danger" href="{{ route('gallerie.velos') }}" aria-current="{{ request()->is('gallerie.velos') ? 'page' : '' }}">Gallerie photo avec tous les modèles des vélos</a>
+            <li class="nav-item {{ request()->is('gallerie-des-velos') ? 'active' : '' }}">
+                <a class="nav-link text-danger {{ request()->is('gallerie-des-velos') ? 'active' : '' }}" href="{{ route('gallerie.velos') }}" aria-current="{{ request()->is('gallerie-des-velos') ? 'page' : '' }}">Galerie photos des modèles des vélos</a>
             </li>
+
             @auth
                 <li class="nav-item">
                     <a class="nav-link text-danger" href="{{ route('biketodbform') }}" aria-current="{{ request()->is('biketodbform') ? 'page' : '' }}">Ajoutez un vélo</a>
