@@ -67,7 +67,7 @@ Formulaire d'ajout de vélo à la db
         <p>
             <label> Assistance électrique :</label>
             <input type="radio" id="electric_assitance_true" name="electric_assitance" required value="1">
-            <label for="electric_assitance_true">Assistance électrique</label>
+            <label for="electric_assistance_true">Assistance électrique</label>
             <input type="radio" id="electric_assitance_false" name="electric_assitance" required
                    value="0">
             <label for="electric_assitance_false">Pas d'assistance électrique</label>
