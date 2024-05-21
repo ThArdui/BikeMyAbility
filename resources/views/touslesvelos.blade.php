@@ -17,17 +17,18 @@
             @foreach($bikes as $bike)
                 <div class="col-md-2">
                     <div class="card mb-2">
-                        @if($bike->Picture)
+                        <h2 class="card-title">{{ $bike->Bike_name }}</h2>
+                        <p class="card-text">Adapté pour les types d'handicap: {{ $bike->Disability_type }}</p>
+
+                    @if($bike->Picture)
                             <a href="{{ route('details.velo', $bike->id) }}">
-                                <img src="{{ asset('' . $bike->Picture) }}" class="card-img-top" alt="Vélo adapté pour les handicapes: {{ $bike->Disability_type }}. Le nom du vélo est {{ $bike->Bike_name }}">
+                                <img src="{{ asset('' . $bike->Picture) }}" class="card-img-top" alt="Le nom du vélo est {{ $bike->Bike_name }}">
                             </a>
                         @else
                             <img src="path/to/placeholder/image.jpg" class="card-img-top" alt="Pas d'image disponible">
                         @endif
                         <div class="card-body">
-                            <h2 class="card-title">{{ $bike->Bike_name }}</h2>
-                            <p class="card-text">Adapté pour: {{ $bike->Disability_type }}</p>
-                        </div>
+                             </div>
                     </div>
                 </div>
             @endforeach
