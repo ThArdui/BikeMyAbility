@@ -84,7 +84,7 @@ Trouvez votre vélo idéal - BikemyAbility
         </select>
     </fieldset>
     -->
-    <!-- freinage -->
+    <!-- freinage ok -->
     <fieldset>
     <legend> Type de freinage </legend>
     <p> <input type="radio"  id="drum_brake" name="brakes" value="drum_brake">
