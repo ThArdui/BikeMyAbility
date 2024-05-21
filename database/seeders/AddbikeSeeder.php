@@ -17,7 +17,8 @@ class AddbikeSeeder extends Seeder
                 [
                     'Bike_name' => 'Easy Rider',
                     'Description' => 'Le Easy Rider est un tricycle conçu spécifiquement pour les adultes, offrant une solution de mobilité stable et confortable. Avec son design ergonomique et sa construction robuste, il est idéal pour les personnes ayant des besoins de mobilité spécifiques, notamment les personnes âgées ou celles ayant des difficultés de coordination. Son siège réglable et ses poignées ergonomiquiques garantissent un confort optimal, tandis que ses trois roues offrent une stabilité supérieure.',
-                    'Pros' => '- Conçu spécifiquement pour les adultes\n - Stabilité accrue grâce à trois roues<br> - Siège réglable et poignées ergonomiques pour un confort optimal<br> - Convient aux personnes âgées et à celles ayant des difficultés de coordination',
+                    'Pros' => '- Conçu spécifiquement pour les adultes
+- Stabilité accrue grâce à trois roues<br> - Siège réglable et poignées ergonomiques pour un confort optimal<br> - Convient aux personnes âgées et à celles ayant des difficultés de coordination',
                     'Cons' => '- Encombrant pour le transport<br> - Pas adapté à une utilisation sportive intensive<br> - Nécessite un espace de rangement supplémentaire',
                     'Weight' => 30,
                     'Electrical_assistance' => true, // Le Easy Rider est disponible avec assistance électrique
