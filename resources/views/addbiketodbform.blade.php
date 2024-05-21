@@ -3,7 +3,7 @@
 Formulaire d'ajout de vélo à la db
 @endsection
 @section('content')
-<h1 class="text-center">Ajoutez un vélo :-) </h1>
+<h1 class="text-center text-danger-emphasis">Ajoutez un vélo </h1>
 
 <form action="{{route('add-bike-db')}}" method="post">
 
