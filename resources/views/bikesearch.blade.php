@@ -109,7 +109,7 @@ Trouvez votre vélo idéal - BikemyAbility
         </select>
     </fieldset>
  -->
-    <!-- hauteur de cadre -->
+    <!-- hauteur de cadre ok -->
     <fieldset>
         <legend> Hauteur du cadre</legend>
         <p> <input id="frame_hight" type="radio" name="frame_height" value="frame_hight">

@@ -11,7 +11,12 @@
             <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                 <a class="nav-link text-danger {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}" aria-current="{{ request()->is('/') ? 'page' : '' }}">Accueil</a>
             </li>
-
+            <li class="nav-item {{ request()->is('gallerie-des-velos') ? 'active' : '' }}">
+                <a class="nav-link text-danger {{ request()->is('gallerie-des-velos') ? 'active' : '' }}" href="{{ route('gallerie.velos') }}" aria-current="{{ request()->is('gallerie-des-velos') ? 'page' : '' }}">Galerie photos des modèles des vélos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="{{ route('contact') }}" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a>
+            </li>
         @guest
                 <li class="nav-item {{ request()->is('login') ? 'active' : '' }}">
                     <a class="nav-link text-danger" href="{{ route('login') }}" aria-current="{{ request()->is('login') ? 'page' : '' }}">Se connecter</a>
@@ -21,12 +26,7 @@
                 </li>
 
             @endguest
-            <li class="nav-item">
-                <a class="nav-link text-danger" href="{{ route('contact') }}" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a>
-            </li>
-            <li class="nav-item {{ request()->is('gallerie-des-velos') ? 'active' : '' }}">
-                <a class="nav-link text-danger {{ request()->is('gallerie-des-velos') ? 'active' : '' }}" href="{{ route('gallerie.velos') }}" aria-current="{{ request()->is('gallerie-des-velos') ? 'page' : '' }}">Galerie photos des modèles des vélos</a>
-            </li>
+
 
             @auth
                 <li class="nav-item">
