@@ -95,8 +95,8 @@ class AddbikeSeeder extends Seeder
                     'Brakes_type' => 'Freins à disques', // Type de freinage
                     'Frame_height' => 'Cadre bas', // Hauteur du cadre
                     'Disability_type' => 'physique', // Types de handicap associés au vélo
-                    'Bike_use' => 'main', // Utilisation prévue du vélo
-                    'Pedal_way' => 'main', // Façon de pédaler
+                    'Bike_use' => 'solo', // Utilisation prévue du vélo
+                    'Pedal_way' => 'pedal_arms', // Façon de pédaler
                     'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.',
                     'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
                     'Picture' => 'pictures/handonsbike.jpg'
@@ -106,7 +106,7 @@ class AddbikeSeeder extends Seeder
                     'Description' => 'Le Handbike réglable HB500 de Decathlon est conçu pour les personnes à mobilité réduite ou en situation de handicap. Idéal pour les déplacements en ville et les loisirs, ce vélo permet une plus grande autonomie grâce à sa capacité d\'adaptation à différents besoins.',
     'Pros' => '- Adapté aux différentes pathologies de handicap
     - Facilité d\'utilisation avec des réglages standards pré-configurés
-              - Assure autonomie et confort aux utilisateurs
+              - Aautonomie et confort assuré pour les  utilisateurs
               - Livré prêt à l\'usage',
     'Cons' => '- Encombrant pour le transport
               - Nécessite un entretien régulier pour assurer sécurité et performance
@@ -119,7 +119,7 @@ class AddbikeSeeder extends Seeder
     'Frame_height' => 'Cadre bas', // Hauteur du cadre
     'Disability_type' => 'physique, mental', // Types de handicap associés au vélo
     'Bike_use' => 'solo', // Utilisation prévue du vélo
-    'Pedal_way' => 'pedal_hands', // Façon de pédaler
+    'Pedal_way' => 'pedal_arms', // Façon de pédaler
     'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.', // Dextérité des membres supérieurs
     'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
     'Picture' => 'pictures/handbikedecathlon.jpg'
