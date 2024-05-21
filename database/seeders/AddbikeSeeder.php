@@ -34,18 +34,14 @@ class AddbikeSeeder extends Seeder
                 ],
                 [
                     'Bike_name' => 'Maxi-Evol',
-                    'Description' => 'Le Maxi-Evol est un tricycle à trois roues conçu pour offrir stabilité et confort. Il est idéal pour les personnes ayant des besoins spécifiques en termes de mobilité, notamment les personnes âgées ou celles ayant des difficultés à maintenir l’équilibre sur un vélo traditionnel.',
-                    'Pros' => [
-                        'Stabilité accrue grâce aux trois roues',
-                        'Confortable avec un siège ergonomique',
-                        'Équipé d\'un panier de transport',
-                        'Idéal pour les personnes âgées ou ayant des problèmes d\'équilibre'
-                    ],
-                    'Cons' => [
-                        'Encombrant pour le transport',
-                        'Requiert un espace de stationnement plus grand',
-                        'Peut nécessiter un temps d\'adaptation pour la conduite'
-                    ],
+                    'Description' => 'Le Maxi-Evol est un tricycle à trois roues conçu pour offrir stabilité et confort. Il est idéal pour les personnes ayant des besoins spécifiques en termes de mobilité, notamment les personnes âgées ou celles ayant des difficultés à maintenir l\’équilibre sur un vélo traditionnel.',
+                    'Pros' => '- Stabilité accrue grâce aux trois roues
+                        - Confortable avec un siège ergonomique
+                        - Équipé d\'un panier de transport
+                        Idéal pour les personnes âgées ou ayant des problèmes d\'équilibre',
+                    'Cons' => '- Encombrant pour le transport
+                    - Requiert un espace de stationnement plus grand
+                    - Peut nécessiter un temps d\'adaptation pour la conduite',
                     'Weight' => 27,
                     'Electrical_assistance' => true, // Disponible avec assistance électrique
                     'Foldable' => false, // Le Maxi-Evol n'est pas pliable
@@ -55,30 +51,21 @@ class AddbikeSeeder extends Seeder
                     'Disability_type' => 'physique', // Types de handicap associés au vélo
                     'Bike_use' => 'solo', // Utilisation prévue du vélo
                     'Pedal_way' => 'pedal_legs', // Façon de pédaler
-                    'Dexterity_arms' => [
-                        'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…',
-                        'La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.'
-                    ], // Dextérité des membres supérieurs
-                    'Balance' => [
-                        'Je peux tenir sur une selle',
-                        'J’ai besoin d’être dans un siège'
-                    ], // Équilibre du cycliste
+                    'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses, La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.', // Dextérité des membres supérieurs
+                    'Balance' => 'Je peux tenir sur une selle, J\’ai besoin d\’être dans un siège',
+                     // Équilibre du cycliste
                     'Picture' => 'pictures/maxievolbike.jpg'
                 ],
                 [
                     'Bike_name' => 'Scorpion fx',
                     'Description' => 'Le Scorpion fx est un tricycle couché pliable de hauteur moyenne, conçu pour les cyclistes souhaitant combiner confort, performance et praticité pour les voyages. Son design pliable permet de le ranger facilement sans outils en 60 secondes, et sa suspension arrière assure une conduite confortable même sur de longues distances.',
-                    'Pros' => [
-                        'Pliable sans outils en 60 secondes',
-                        'Stabilité améliorée',
-                        'Hauteur de siège moyenne pour une montée facile',
-                        'Capacité de bagages jusqu\'à 60 kg'
-                    ],
-                    'Cons' => [
-                        'Encombrant même plié',
-                        'Peut être difficile à transporter en transport public',
-                        'Nécessite un espace de stationnement plus grand'
-                    ],
+                    'Pros' => '- Pliable sans outils en 60 secondes
+                        - Stabilité améliorée
+                        - Hauteur de siège moyenne pour une montée facile
+                        - Capacité de bagages jusqu\'à 60 kg',
+                    'Cons' => '- Encombrant même plié
+                        - Peut être difficile à transporter en transport public
+                        - Nécessite un espace de stationnement plus grand',
                     'Weight' => 20, // poids approximatif
                     'Electrical_assistance' => true, // Disponible avec assistance électrique
                     'Foldable' => true, // Le Scorpion fx est pliable
@@ -88,14 +75,8 @@ class AddbikeSeeder extends Seeder
                     'Disability_type' => 'physique', // Types de handicap associés au vélo
                     'Bike_use' => 'solo', // Utilisation prévue du vélo
                     'Pedal_way' => 'pedal_legs', // Façon de pédaler
-                    'Dexterity_arms' => [
-                        'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…',
-                        'La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.'
-                    ], // Dextérité des membres supérieurs
-                    'Balance' => [
-                        'Je peux tenir sur une selle',
-                        'J’ai besoin d’être dans un siège'
-                    ], // Équilibre du cycliste
+                    'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses, La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.', // Dextérité des membres supérieurs
+                    'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
                     'Picture' => 'pictures/scorpion bike.jpg'
                 ],
                 [
@@ -107,7 +88,7 @@ class AddbikeSeeder extends Seeder
                - Cockpit ergonomique pour un confort optimal',
                     'Cons' => '- Adaptation nécessaire pour les utilisateurs habitués aux pédales
                - Non pliable avec le module de propulsion manuelle installé',
-                    'Weight' => 17,5, // Poids approximatif du module Hands-On-Cycle
+                    'Weight' => 17.5, // Poids approximatif du module Hands-On-Cycle
                     'Electrical_assistance' => true, // Disponible avec assistance électrique
                     'Foldable' => false, // Le tricycle n'est pas pliable avec le module Hands-On-Cycle
                     'Speeds_number' => 10, // Nombre de vitesses
@@ -122,7 +103,7 @@ class AddbikeSeeder extends Seeder
                 ],
                 [
                     'Bike_name' => 'Handbike réglable HB500',
-                    'Description' => 'Le Handbike réglable HB500 de Decathlon est conçu pour les personnes à mobilité réduite ou en situation de handicap. Idéal pour les déplacements en ville et les loisirs, ce vélo permet une plus grande autonomie grâce à sa capacité d'adaptation à différents besoins.',
+                    'Description' => 'Le Handbike réglable HB500 de Decathlon est conçu pour les personnes à mobilité réduite ou en situation de handicap. Idéal pour les déplacements en ville et les loisirs, ce vélo permet une plus grande autonomie grâce à sa capacité d\'adaptation à différents besoins.',
     'Pros' => '- Adapté aux différentes pathologies de handicap
     - Facilité d\'utilisation avec des réglages standards pré-configurés
               - Assure autonomie et confort aux utilisateurs
@@ -143,7 +124,7 @@ class AddbikeSeeder extends Seeder
     'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
     'Picture' => 'pictures/handbikedecathlon.jpg'
 ],
-=======
+            [
                 'Bike_name' => 'Easy Rider',
                 'Description' => 'Le Easy Rider est un tricycle conçu spécifiquement pour les adultes, offrant une solution de mobilité stable et confortable. Avec son design ergonomique et sa construction robuste, il est idéal pour les personnes ayant des besoins de mobilité spécifiques, notamment les personnes âgées ou celles ayant des difficultés de coordination. Son siège réglable et ses poignées ergonomiques garantissent un confort optimal, tandis que ses trois roues offrent une stabilité supérieure.',
                 'Pros' => '- Conçu spécifiquement pour les adultes\n- Stabilité accrue grâce à trois roues\n- Siège réglable et poignées ergonomiques pour un confort optimal\n- Convient aux personnes âgées et à celles ayant des difficultés de coordination',
