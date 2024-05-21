@@ -53,15 +53,15 @@ class BikeSearchController extends controller
         }
         }
 // dexterite arms soucis
-/*        if (isset($searchCriteria['Dexterity_arms']) && !empty($searchCriteria['Dexterity_arms'])) {
+ /*       if (isset($searchCriteria['Dexterity_arms']) && !empty($searchCriteria['Dexterity_arms'])) {
             $usearms = (array)$searchCriteria['Dexterity_arms'];
-
-            if (count($usearms) > 0) {
-                $bikes->whereIn('Dexterity_arms', $usearms);
-                $fieldsUsed = true;
+            if($usearms[0]==='good') {
+                $bikes = $bikes->where('Dexterity_arms','good');
             }
-        }
-*/
+            if($usearms[0]==='average') {
+                $bikes = $bikes->where('Dexterity_arms','average');
+            }
+        } */
 // type de freinage ok
         if (isset($searchCriteria['brakes']) && !empty($searchCriteria['brakes']) && $searchCriteria['brakes']!=="anyway_brakes") {
             if($searchCriteria['brakes']==='drum_brake'){

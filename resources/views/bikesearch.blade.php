@@ -7,7 +7,7 @@ Trouvez votre vélo idéal - BikemyAbility
     <h1 class="text-center"> Trouvez votre vélo idéal</h1>
 <form action="{{url('rechercher-velos')}}" method="get">
     @csrf
-    <!-- handicap ok -->
+    <!-- handicap -->
     <fieldset>
         <legend> Votre type d'handicap</legend>
          <p> <label for="physique">Physique</label>
@@ -30,7 +30,7 @@ Trouvez votre vélo idéal - BikemyAbility
                 <input id="mental" name="handicap[]" type="checkbox" value="mental" >
         </p>
     </fieldset>
-    <!-- assistance electrique ok -->
+    <!-- assistance electrique -->
     <fieldset>
         <legend> Assistance electrique </legend>
         <p>
@@ -40,7 +40,7 @@ Trouvez votre vélo idéal - BikemyAbility
             <input id="assistance_electric_no" name="electrical_assistance" type="radio" value="non_assistance_electric" ><label for="assistance_electric_no" aria-label= "Non assistance electrique">Non</label>
         </p>
     </fieldset>
-    <!-- utility  ok -->
+    <!-- utility  -->
     <fieldset>
         <legend> Comment souhaitez-vous vivre votre plaisir cyclable?</legend>
 
@@ -52,7 +52,7 @@ Trouvez votre vélo idéal - BikemyAbility
             <input  id="several " type="radio" name="utility" value="several"> <label for="several ">À plusieurs</label>
         </p>
     </fieldset>
-    <!-- pedalage  ok -->
+    <!-- pedalage  o-->
     <fieldset>
         <legend> Pédalage </legend>
         <p>
@@ -84,19 +84,17 @@ Trouvez votre vélo idéal - BikemyAbility
         </select>
     </fieldset>
     -->
-    <!-- freinage ok -->
     <fieldset>
     <legend> Type de freinage </legend>
-    <p> <input type="radio"  id="drum_brake" name="brakes" value="drum_brake">
+    <p> <input type="checkbox"  id="drum_brake" name="brakes[]" value="drum_brake">
         <label for="drum_brake"> Freins à tambours</label>  </p>
-    <p> <input type="radio"  id="disc_brakes" name="brakes" value="disc_brakes">
+    <p> <input type="checkbox"  id="disc_brakes" name="brakes[]" value="disc_brakes">
         <label for="disc_brakes"> Freins à disques</label>  </p>
-    <p> <input type="radio"  id="coaster_brakes" name="brakes" value="coaster_brakes">
+    <p> <input type="checkbox"  id="coaster_brakes" name="brakes[]" value="coaster_brakes">
         <label for="coaster_brakes"> Freins à rétropédalage</label>  </p>
-    <p> <input type="radio"  id="anyway_brakes" name="brakes" value="anyway_brakes">
+    <p> <input type="checkbox"  id="anyway_brakes" name="brakes[]" value="anyway_brakes">
         <label for="anyway_brakes"> Peu importe </label>  </p>
 </fieldset>
-    <!-- equilibre
     <fieldset>
         <legend> Equilibre</legend>
         <label for="balance">Niveau d'équilibre :</label>
@@ -108,8 +106,6 @@ Trouvez votre vélo idéal - BikemyAbility
             <option value="wheelchair_preference"> J’ai besoin/ je préfère rester dans mon fauteuil roulant </option>
         </select>
     </fieldset>
- -->
-    <!-- hauteur de cadre ok -->
     <fieldset>
         <legend> Hauteur du cadre</legend>
         <p> <input id="frame_hight" type="radio" name="frame_height" value="frame_hight">
