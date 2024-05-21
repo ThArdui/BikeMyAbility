@@ -95,8 +95,8 @@ class AddbikeSeeder extends Seeder
                     'Brakes_type' => 'Freins à disques', // Type de freinage
                     'Frame_height' => 'Cadre bas', // Hauteur du cadre
                     'Disability_type' => 'physique', // Types de handicap associés au vélo
-                    'Bike_use' => 'main', // Utilisation prévue du vélo
-                    'Pedal_way' => 'main', // Façon de pédaler
+                    'Bike_use' => 'solo', // Utilisation prévue du vélo
+                    'Pedal_way' => 'pedal_arms', // Façon de pédaler
                     'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne : je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.',
                     'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
                     'Picture' => 'pictures/handonsbike.jpg'
@@ -106,7 +106,7 @@ class AddbikeSeeder extends Seeder
                     'Description' => 'Le Handbike réglable HB500 de Decathlon est conçu pour les personnes à mobilité réduite ou en situation de handicap. Idéal pour les déplacements en ville et les loisirs, ce vélo permet une plus grande autonomie grâce à sa capacité d\'adaptation à différents besoins.',
     'Pros' => '- Adapté aux différentes pathologies de handicap
     - Facilité d\'utilisation avec des réglages standards pré-configurés
-              - Assure autonomie et confort aux utilisateurs
+              - Aautonomie et confort assuré pour les  utilisateurs
               - Livré prêt à l\'usage',
     'Cons' => '- Encombrant pour le transport
               - Nécessite un entretien régulier pour assurer sécurité et performance
@@ -119,12 +119,105 @@ class AddbikeSeeder extends Seeder
     'Frame_height' => 'Cadre bas', // Hauteur du cadre
     'Disability_type' => 'physique, mental', // Types de handicap associés au vélo
     'Bike_use' => 'solo', // Utilisation prévue du vélo
-    'Pedal_way' => 'pedal_hands', // Façon de pédaler
+    'Pedal_way' => 'pedal_arms', // Façon de pédaler
     'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués.', // Dextérité des membres supérieurs
     'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
     'Picture' => 'pictures/handbikedecathlon.jpg'
 ],
-            [
+        [
+            'Bike_name' => 'Fun2Go',
+            'Description' => 'Le Fun2Go est un vélo tandem à trois roues conçu pour offrir une expérience cycliste unique aux cyclistes de tous âges et de toutes capacités. Avec son design innovant, il permet à deux personnes de profiter ensemble de l\'activité cycliste, avec une personne pédalant à l\'avant et une personne assistant ou simplement profitant du voyage à l\'arrière. Il offre une conduite stable et confortable, idéale pour les sorties de loisirs en famille ou entre amis.',
+            'Pros' => '- Conception tandem unique pour une expérience cycliste partagée
+- Stabilité accrue avec trois roues
+- Confortable pour les passagers arrière
+- Idéal pour les sorties de loisirs en famille ou entre amis',
+            'Cons' => '- Encombrant pour le transport
+- Requiert un espace de stationnement plus grand
+- Peut nécessiter un certain temps pour s\'habituer à la conduite en tandem',
+            'Weight' => 50,
+            'Electrical_assistance' => true, // Le Fun2Go est disponible avec assistance électrique
+            'Foldable' => false, // Le Fun2Go n'est pas pliable
+            'Speeds_number' => 8, // Nombre de vitesses
+            'Brakes_type' => 'Freins à disques', // Type de freinage
+            'Frame_height' => 'Cadre bas', // Hauteur du cadre
+            'Disability_type' => 'physique, mental, visuel, auditif, cognitif', // Types de handicap associés au vélo
+            'Bike_use' => 'duo', // Utilisation prévue du vélo
+            'Pedal_way' => 'pedal_legs', // Façon de pédaler
+            'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués. ', // Dextérité des membres supérieurs
+            'Balance' => 'Je peux tenir sur une selle, J’ai besoin d’être dans un siège', // Équilibre du cycliste
+            'Picture' => 'pictures/fun2gobike.jpg' // Lien vers l'image du vélo
+        ],
+                 [
+
+
+                     'Bike_name' => 'Veloplus',
+                     'Description' => 'Le Veloplus est un vélo adapté spécialement pour les personnes en fauteuil roulant. Il offre une solution de mobilité flexible et confortable, permettant aux utilisateurs de transporter leur fauteuil roulant tout en profitant d\'une expérience de cyclisme agréable. Avec sa conception robuste et ses fonctionnalités ergonomiques, le Veloplus assure une conduite en toute sécurité et une accessibilité accrue.',
+                     'Pros' => '- Solution de mobilité flexible pour les personnes en fauteuil roulant\n - Conception robuste et ergonomique
+- Facilité d\'utilisation et sécurité accrue
+- Permet de transporter le fauteuil roulant pendant le trajet en vélo',
+                     'Cons' => '- Peut nécessiter un apprentissage pour une utilisation optimale
+- Peut être encombrant dans certains espaces restreints',
+                     'Weight' => 64, // Poids du vélo (en kg)
+                     'Electrical_assistance' => true, // Le Veloplus est disponible avec assistance électrique
+                     'Foldable' => true, // Le Veloplus n'est pas pliable
+                     'Speeds_number' => 24, // Nombre de vitesses
+                     'Brakes_type' => 'Freins à disques', // Type de freinage
+                     'Frame_height' => 'Cadre haut', // Hauteur du cadre
+                     'Disability_type' => 'Physique, mental, auditif, visuel, cognitif ', // Type de handicap associé au vélo
+                     'Bike_use' => 'Duo', // Utilisation prévue du vélo
+                     'Pedal_way' => 'Auccun des deux', // Façon de pédaler
+                     'Dexterity_arms' =>    "J'ai du mal à utiliser mes mains", // Dextérité des membres supérieurs
+                     'Balance' => 'J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables, J’ai besoin/ je préfère rester dans mon fauteuil roulant', // Équilibre du cycliste
+                     'Picture' => 'pictures/veloplusbike.jpg' // Lien vers l'image du vélo
+                 ],
+                [
+                    'Bike_name' => 'O\'Pair',
+                    'Description' => 'Le O\'Pair est un vélo à trois roues conçu pour le transport de passagers, offrant une solution de mobilité flexible et confortable. Son design innovant permet à un accompagnateur de conduire le vélo tandis que le passager peut s\'asseoir confortablement à l\'avant. Doté d\'un siège réglable et de poignées ergonomiques, le O\'Pair offre une expérience de conduite agréable et sécurisée.',
+                    'Pros' => '- Conçu pour le transport de passagers
+- Siège réglable pour un confort optimal\n - Poignées ergonomiques pour une conduite sûre
+- Convient aux personnes à mobilité réduite',
+                    'Cons' => '- Encombrant pour le transport
+- Nécessite un espace de rangement supplémentaire',
+                    'Weight' => 40,
+                    'Electrical_assistance' => true,
+                    'Foldable' => false,
+                    'Speeds_number' => 7,
+                    'Brakes_type' => 'Freins à disques',
+                    'Frame_height' => 'Cadre haut',
+                    'Disability_type' => 'physique, mental, visuel, auditif, cognitif',
+                    'Bike_use' => 'duo',
+                    'Pedal_way' => 'Auccun des deux',
+                    'Dexterity_arms' => 'J\'ai du mal à utiliser mes mains',
+                    'Balance' => 'J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables',
+                    'Picture' => 'pictures/opairbike.jpg'
+
+                ],
+
+                [
+                    'Bike_name' => 'Twinny Plus',
+                    'Description' => 'Le Twinny Plus est un tandem confortable conçu pour deux personnes, offrant une expérience de cyclisme agréable et sécurisée. Avec son cadre solide et ses composants de haute qualité, ce tandem est idéal pour les balades en famille ou entre amis. Doté de sièges réglables et de poignées ergonomiques, le Twinny Plus offre un confort optimal pour les deux cyclistes.',
+                    'Pros' => '- Conçu pour deux personnes
+- Sièges réglables pour un confort optimal
+- Poignées ergonomiques pour une conduite sûre
+- Convient aux balades en famille ou entre amis',
+                    'Cons' => '- Encombrant pour le transport
+- Nécessite un espace de rangement supplémentaire
+- Limité à deux personnes',
+                    'Weight' => 35,
+                    'Electrical_assistance' => true,
+                    'Foldable' => true,
+                    'Speeds_number' => 8,
+                    'Brakes_type' => 'Freins à disques',
+                    'Frame_height' => 'Cadre bas',
+                    'Disability_type' => 'Physique, auditif, visuel, cognitif, mental',
+                    'Bike_use' => 'duo',
+                    'Pedal_way' => 'pedal_legs',
+                    'Dexterity_arms' => 'La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…, La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués',
+                    'Balance' => 'Je peux tenir sur une selle',
+                    'Picture' => 'pictures/twinnyplustandem.jpg'
+                ]];
+
+/*             [
                 'Bike_name' => 'Easy Rider',
                 'Description' => 'Le Easy Rider est un tricycle conçu spécifiquement pour les adultes, offrant une solution de mobilité stable et confortable. Avec son design ergonomique et sa construction robuste, il est idéal pour les personnes ayant des besoins de mobilité spécifiques, notamment les personnes âgées ou celles ayant des difficultés de coordination. Son siège réglable et ses poignées ergonomiques garantissent un confort optimal, tandis que ses trois roues offrent une stabilité supérieure.',
                 'Pros' => '- Conçu spécifiquement pour les adultes\n- Stabilité accrue grâce à trois roues\n- Siège réglable et poignées ergonomiques pour un confort optimal\n- Convient aux personnes âgées et à celles ayant des difficultés de coordination',
@@ -214,7 +307,7 @@ class AddbikeSeeder extends Seeder
                 'Balance' => 'Je peux tenir sur une selle', // Équilibre du cycliste
                 'Picture' => 'pictures/handbikehb500.jpg' // Lien vers l'image du vélo, si disponible
             ],
-        ];
+        ]; */
 
         foreach ($bikesToAdd as $bike) {
             Bike::create($bike);

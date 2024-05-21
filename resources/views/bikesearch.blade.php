@@ -4,7 +4,7 @@ Trouvez votre vélo idéal - BikemyAbility
 @endsection
 @section('content')
     @auth
-    <h1 class="text-center"> Trouvez votre vélo idéal</h1>
+    <h1 class="text-center text-danger-emphasis"> Trouvez votre vélo idéal</h1>
 <form action="{{url('rechercher-velos')}}" method="get">
     @csrf
     <!-- handicap -->
