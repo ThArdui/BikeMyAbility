@@ -62,7 +62,7 @@ class BikeSearchController extends controller
             }
         }
 */
-// type de freinage
+// type de freinage ok
         if (isset($searchCriteria['brakes']) && !empty($searchCriteria['brakes']) && $searchCriteria['brakes']!=="anyway_brakes") {
             if($searchCriteria['brakes']==='drum_brake'){
                 $bikes = $bikes->where('Brakes_type','Freins à tambours');
@@ -75,19 +75,17 @@ class BikeSearchController extends controller
             }
             $fieldsUsed = true;
         }
-/*            $brakes = (array)$searchCriteria['brakes'];
-
-            if (count($brakes) > 0) {
-                $bikes->whereIn('Brakes_type', $brakes);
-                $fieldsUsed = true;
-            }
-        }*/
-
  // aquilibre
-
-
 // hauteur de cadre
-
+if (isset($searchCriteria['frame_height']) && $searchCriteria['frame_height']!=="frame_anyway") {
+    if($searchCriteria['frame_height']==='frame_hight') {
+        $bikes = $bikes->where('Frame_height','cadre haut');
+    }
+    if($searchCriteria['frame_height']=== 'frame_low'){
+        $bikes = $bikes->where('Frame_height','cadre bas');
+    }
+    $fieldsUsed = true;
+}
 
         // Exécutez la requête
         if ($fieldsUsed) {
