@@ -12,12 +12,14 @@ use  Illuminate\Database\Eloquent;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BikeController;
 
-//route vers le homepage. Ca devrait etre la route principale je pense.
-Route::get('/homepage', [HomeControllers::class, 'index']);
-
 // route pour vers le formulaire provisoire pour ajouter un vélo à la db:
-Route::get('/biketodbform',function (){
-    return view('addbiketodbform');
+//
+
+//route vers le homepage. Ca devrait etre la route principale je pense.
+Route::get('/', [HomeControllers::class, 'index'])->name('home');
+
+    Route::get('/biketodbform',function (){
+        return view('addbiketodbform');
 })->name('biketodbform');
 
 // route vers le contrôleur qui gère la recherche de vélos:
@@ -54,10 +56,10 @@ Route::get('/gallerie-des-velos', [BikeController::class, 'index'])->name('galle
 //route vers les details du velo:
 Route::get('/details-velo/{bike}', [BikeController::class, 'show'])->name('details.velo');
 
-
+/*
 Route::get('/', function () {   // route par défaut de laravel
-    return view('homepage');
-});
+    return view('bienvenu');
+})->name('home');*/
 // route vers table bike encore utile?
 route::get('/bikes',function (){
     $bikes=DB::table('bikes')->get();

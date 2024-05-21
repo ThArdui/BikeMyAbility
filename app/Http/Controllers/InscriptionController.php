@@ -14,17 +14,17 @@ class InscriptionController extends Controller
         return view('formulaireInscriptionConnexion', compact('userExists'));
     }
 
-    public function showRegistrationForm()
+        public function showRegistrationForm(Request $request)
     {
         $userExists = false;
 
-        /*if ($this->checkUserExists(request())) {
-            $userExists = true;
-        }*/
+        if ($request->has('email')) {
+            $email = $request->input('email');
+            $userExists = User::where('email', $email)->exists();
+        }
 
         return view('formulaireInscriptionConnexion', compact('userExists'));
     }
-
 
     public function login(Request $request)
     {
@@ -60,7 +60,7 @@ class InscriptionController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'firstname' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:_inscription,email',
             'password' => 'required|string|min:8',
             'password_confirmation' => 'required|same:password'
         ], [
@@ -79,20 +79,17 @@ class InscriptionController extends Controller
             'password' => bcrypt($request->password),
         ]);
         return view('auth.result')->with('success', 'Inscription réussie !');
-        return redirect('/login')->with('success', 'Inscription réussie !');
+        //return redirect('/login')->with('success', 'Inscription réussie !');
     }
 
     public function checkUserExists(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email',
-        ]);
-        $email = $request->input('email');
-        $userExists = User::where('email', $email)->exists();
-        if ($userExists) {
-            return redirect()->route('login')->withErrors(['email' => 'L\'adresse email est déjà utilisée.']);
-        } else {
-            return redirect()->route('register')->with('email', $email);
-        }
+{
+    $request->validate([
+        'email' => 'required|email',
+    ]);
+    $email = $request->input('email');
+    $userExists = User::where('email', $email)->exists();
+    return response()->json(['exists' => $userExists]);
+
     }
 }
