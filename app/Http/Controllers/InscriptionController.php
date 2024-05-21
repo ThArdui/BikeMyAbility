@@ -69,15 +69,16 @@ class InscriptionController extends Controller
                 'password_confirmation.same' => 'Les deux mots de passe doivent correspondre !',
                 'email.unique' => 'cette adresse mail est déja utilisée',
                 'firstname.required' => 'le prénom est obligatoire'
-            ]
-        );
+            ]);
 
-        User::create([
+        $user = User::create([
             'name' => $request->name,
             'firstname' => $request->firstname,
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
+        Auth::login($user);
+        
         return view('auth.result')->with('success', 'Inscription réussie !');
         //return redirect('/login')->with('success', 'Inscription réussie !');
     }
