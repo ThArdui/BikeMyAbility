@@ -3,7 +3,7 @@
 Formulaire d'ajout de vélo à la db
 @endsection
 @section('content')
-<h1 class="text-center text-danger-emphasis">Ajoutez un vélo </h1>
+<h1 class="text-center text-danger-emphasis" id="addbike">Ajoutez un vélo </h1>
 
 <form action="{{route('add-bike-db')}}" method="post">
 
@@ -21,10 +21,10 @@ Formulaire d'ajout de vélo à la db
             @endif
         </p>
         <label for="description">Description: </label>
-        <textarea id="description" name="description" rows="4" cols="50" required value="{{ old('description') }}"></textarea>
+        <textarea id="description" name="description" rows="4" cols="50" required>{{ old('Description') }}</textarea>
         <p>
             <label for="pros">Avantages: </label>
-            <textarea id="pros" name="pros" rows="4" cols="50" class="form-control {{ $errors->has('pros') ? 'is-invalid': '' }}"  value="{{ old('pros') }}" required></textarea>
+            <textarea id="pros" name="pros" rows="4" cols="50" class="form-control {{ $errors->has('pros') ? 'is-invalid': '' }}" required>{{ old('Pros') }}</textarea>
             @if($errors->has('pros'))
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('pros') }}</strong>
@@ -34,17 +34,15 @@ Formulaire d'ajout de vélo à la db
         <p>
 
             <label for="cons">Inconvénients: </label>
-            <textarea id="cons" name="cons" rows="4" cols="50" required></textarea>
+            <textarea id="cons" name="cons" rows="4" cols="50" required>{{ old('Cons') }}</textarea>
         </p>
-
-
     </fieldset>
 
     <fieldset>
         <legend>Caractéristtiques principales </legend>
         <p>
             <label for="weight"> Poids: </label>
-            <input type="number"   name="weight" id="weight" required>
+            <input type="text"   name="weight" id="weight" required>
         </p>
         <p>
             <label> Pliable :</label>
@@ -56,7 +54,7 @@ Formulaire d'ajout de vélo à la db
 
         <p>
             <label for="speeds_number"> Nombre de vitesses: </label>
-            <input type="number"  name="speeds_number" id="speeds_number" required>
+            <input type="number"  name="speeds_number" id="speeds_number" required min="0">
         </p>
 
         <p>
@@ -66,11 +64,10 @@ Formulaire d'ajout de vélo à la db
 
         <p>
             <label> Assistance électrique :</label>
-            <input type="radio" id="electric_assitance_true" name="electric_assitance" required value="1">
+            <input type="radio" id="electric_assistance_true" name="electric_assistance" required value="1">
             <label for="electric_assistance_true">Assistance électrique</label>
-            <input type="radio" id="electric_assitance_false" name="electric_assitance" required
-                   value="0">
-            <label for="electric_assitance_false">Pas d'assistance électrique</label>
+            <input type="radio" id="electric_assistance_false" name="electric_assistance" required value="0">
+            <label for="electric_assistance_false">Pas d'assistance électrique</label>
         </p>
        <!-- <p> a ajouter si on ajoute dans la db?"
             <label for="seat_type"> Type d'assise </label>
@@ -80,156 +77,69 @@ Formulaire d'ajout de vélo à la db
     <fieldset>
         <legend> En solo, en duo ou à plusieurs</legend>
         <p>
-            <label> Utilisation en solo :</label>
-            <input type="radio" id="use_solo_true" name="use_solo" value="1" required>
-            <label for="use_solo_true" aria-label="oui solo">Oui</label>
-            <input type="radio" id="use_solo_false" name="use_solo" value="0" required>
-            <label for="use_solo_false" aria-label="non solo">Non</label>
-        </p>
+            <label for="use_solo"> Utilisation en solo :</label>
+            <input type="radio" id="use_solo" name="bike_use" value="use_solo" required>
+            </p>
+        <p><label for="use_duo"> Utilisation en duo :</label>
+            <input type="radio" id="use_duo" name="bike_use" value="use_duo" required>
+            </p>
 
         <p>
-            <label> Utilisation en duo :</label>
-            <input type="radio" id="use_duo_true" name="use_duo" value="1" required>
-            <label for="use_duo_true"  aria-label="oui duo">> Oui</label>
-            <input type="radio" id="use_duo_false" name="use_duo" value="0" required>
-            <label for="use_duo_false"  aria-label="non duo">Non </label>
-        </p>
-
-        <p>
-            <label> Utilisation à plusieurs  :</label>
-            <input type="radio" id="use_several_true" name="use_several" value="1" required>
-            <label for="use_several_true" aria-label="oui a plusieurs"> Oui</label>
-            <input type="radio" id="use_several_false" name="use_several" value="0" required>
-            <label for="use_several_false" aria-label="NON à plusieurs"> Non</label>
+            <label for="use_several"> Utilisation à plusieurs  :</label>
+            <input type="radio" id="use_several" name="bike_use" value="use_several" required><label for="use_several_false" aria-label="NON à plusieurs"> Non</label>
         </p>
     </fieldset>
     <fieldset>
         <legend> Pédalage</legend>
-
         <p>
-            <label> Pédalage avec les jambes :</label>
-            <input type="radio" id="pedal_legs_true" name="pedal_legs" value="1" required>
-            <label for="pedal_legs_true" aria-label="Oui pédaler avec les jambes"> Oui</label>
-            <input type="radio" id="pedal_legs_false" name="pedal_legs" value="0" required>
-            <label for="pedal_legs_false" aria-label="Non  pédaler avec les jambes"> Non </label>
-        </p>
-<!--<p>
-    <label></label>
-
-    <input type="radio" id="" name="" value="1"  required>
-    <label for="" aria-label=""> </label>
-    <input type="radio" id="" name="" value="0"  required>
-    <label for="" aria-label=""> </label>
-
-</p>  -->
-
-        <p>
-            <label>Pédaler avec les bras</label>
-
-            <input type="radio" id="pedal_arms_true" name="pedal_arms" value="1"  required>
-            <label for="pedal_arms_true" aria-label="Oui pédaler avec les  bras"> Oui</label>
-            <input type="radio" id="pedal_arms_false" name="pedal_arms" value="0"  required>
-            <label for="pedal_arms_false" aria-label="Non pédaler avec les bras"> Non </label>
-
+            <input type="radio" id="pedal_legs" name="pedal_way" value="legs" required>
+            <label for="pedal_legs"> Pédaler avec les jambes</label>
         </p>
         <p>
-            <label>Pédaler avec les mains et les jambes</label>
-
-            <input type="radio" id="pedal_arms_legs_true" name="pedal_arms_legs" value="1"  required>
-            <label for="pedal_arms_legs_true" aria-label="Oui pédaler avec les bras et les jambes">Oui </label>
-            <input type="radio" id="pedal_arms_legs_false" name="pedal_arms_legs" value="0"  required>
-            <label for="pedal_arms_legs_false" aria-label="Non pédaler avec les bras et les jambes"> Non</label>
-
+            <input type="radio" id="pedal_arms" name="pedal_way" value="arms" required>
+            <label for="pedal_arms"> Pédaler avec les bras</label>
         </p>
         <p>
-            <label> Je sais pas pédaler</label>
-
-            <input type="radio" id="no_pedal_true" name="no_pedal" value="1"  required>
-            <label for="no_pedal_true" aria-label="Oui, je sais pas pédaler">Oui </label>
-            <input type="radio" id="no_pedal_false" name="no_pedal" value="0"  required>
-            <label for="no_pedal_false" aria-label="Non, je sais pédaler"> Non </label>
-
+            <input type="radio" id="pedal_arms_legs" name="pedal_way" value="arms_legs" required>
+            <label for="pedal_arms_legs"> Pédaler avec les mains et les jambes</label>
+        </p>
+        <p>
+            <input type="radio" id="no_pedal" name="pedal_way" value="no_pedal" required>
+            <label for="no_pedal">Je ne sais pas pedaler</label>
         </p>
     </fieldset>
-<fieldset>
-    <legend> Dextérité membres supérieurs </legend>
-    <p>
-    <label> La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…</label>
+    <fieldset>
+        <legend> Dextérité membres supérieurs </legend>
+        <p>
+            <input type="radio" id="dexterity_good" name="dexterity_arms" required>
+            <label for="dexterity_good">La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses…</label>
+        </p>
+        <p>
+            <input type="radio" id="dexterity_middel" name="dexterity_arms" required>
+            <label for="dexterity_middel">La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués</label>
+        </p>
+        <p>
+            <input type="radio" id="no_dexterity" name="dexterity_arms" required>
+            <label for="no_dexterity">J'ai du mal à utiliser mes mains</label>
+        </p>
+    </fieldset>
 
-    <input type="radio" id="dexterity_good_true" name="dexterity_good" value="1"  required>
-    <label for="dexterity_good_true" aria-label="Oui la dextérité de mes mains est bonne  je sais conduire freiner changer les vitesses "> Oui  </label>
-    <input type="radio" id="dexterity_good_false" name="dexterity_good" value="0"  required>
-    <label for="dexterity_good_false" aria-label="Non, la dextérité de mes mains n est pas bonne  je sais pas  conduire freiner ou changer les vitesses  "> Non </label>
-
-    </p>
-
-    <p>
-
-    <label>La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués </label>
-
-    <input type="radio" id="dexterity_middel_true" name="dexterity_middel" value="1"  required>
-    <label for="dexterity_middel_true" aria-label="oui La dextérité de mes mains est moyenne je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués"> Oui </label>
-    <input type="radio" id="dexterity_middel_false" name="dexterity_middel" value="0"  required>
-    <label for="dexterity_middel_false" aria-label="Non La dextérité de mes mains n'est  pas moyenne "> Non </label>
-
-    </p>
-    <p>
-        <label> J'ai du mal à utiliser mes mains</label>
-
-        <input type="radio" id="no_dexterity_true" name="no_dexterity" value="1"  required>
-        <label for="no_dexterity_true" aria-label="Oui j'ai du mal à utiliser mes maains"> Oui </label>
-        <input type="radio" id="no_dexterity_false" name="no_dexterity" value="0"  required>
-        <label for="no_dexterity_false" aria-label="Non j'ai pas forcément du mal à utiliser mes mains"> Non </label>
-
-    </p>
-</fieldset>
     <fieldset>
         <legend> Equilibre</legend><p>
-            <label> Je peux tenir sur une selle </label>
-
-            <input type="radio" id="saddel_ok_true" name="saddel_ok" value="1"  required>
-            <label for="saddel_ok_true" aria-label="Oui, je peux tenir sur une selle">Oui </label>
-            <input type="radio" id="saddel_ok_false" name="saddel_ok" value="0"  required>
-            <label for="saddel_ok_false" aria-label="Non, je ne peux pas tenir sur une selle">Non </label>
-
-        </p>
-
-        <p>
-            <label>J'ai besoin d'être dans un siège</label>
-
-            <input type="radio" id="seat_needed_true" name="seat_needed" value="1"  required>
-            <label for="seat_needed_true" aria-label=" Oui j'ai besoin d'être dans  un siège"> Oui </label>
-            <input type="radio" id="seat_needed_false" name="seat_needed" value="0"  required>
-            <label for="seat_needed_false" aria-label="Non, j'ai pas forcément besoin d'être dans  un siège "> Non</label>
-
-        </p>
-
-        <p>
-            <label> J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables.</label>
-
-            <input type="radio" id="seat_needed_plus_true" name="seat_needed_plus" value="1"  required>
-            <label for="seat_needed_plus_true" aria-label="Oui J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables "> Oui </label>
-            <input type="radio" id="seat_needed_plus_false" name="seat_needed_plus" value="0"  required>
-            <label for="seat_needed_plus_false" aria-label="Non j'ai pas forcément besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables"> Non </label>
-
-        </p>
-
-        <p>
-            <label> J’ai besoin/ je préfère rester dans mon fauteuil roulant </label>
-
-            <input type="radio" id="wheelchair_true" name="wheelchair" value="1"  required>
-            <label for="wheelchair_true" aria-label="Oui J’ai besoin je préfère rester dans mon fauteuil roulant ">Oui </label>
-            <input type="radio" id="wheelchair_false" name="wheelchair" value="0"  required>
-            <label for="wheelchair_false" aria-label="Non j'ai pas forcément besoin ou je préfère pas forcément rester dans mon fauteuil roulant"> Non </label>
-
-        </p>
-
+            <p><label for="saddel"> Je peux tenir sur une selle </label>
+            <input type="radio" id="saddel" name="balance" value="sadel" required></p>
+        <p><label for="seat_needed">J'ai besoin d'être dans un siège</label>
+            <input type="radio" id="seat_needed" name="balance" value="seat_needed" required></p>
+        <p><label for="seat_needed_plus">J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables.</label>
+            <input type="radio" id="seat_needed_plus" name="balance" value="seat_needed_plus" required></p>
+        <p><label for="wheelchair">J’ai besoin/ je préfère rester dans mon fauteuil roulant </label>
+            <input type="radio" id="wheelchair" name="balance" value="wheelchair" required></p>
     </fieldset>
 
     <fieldset>
         <legend> Données pour la page web </legend>
         <p>
-            <label for="picture"> Veuillez insérez une image?</label>
+            <label for="picture">Veuillez insérez une image?</label>
             <input type="file"  accept="image/jpeg, image/png" maxlength="2048" name="picture" id="picture" required>
 
         </p>

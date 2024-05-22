@@ -37,27 +37,27 @@ class BikeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            // Ajoutez les règles de validation ici
-            'Bike_name' => 'required|string|max:70',
-            'Description' => 'required|string|max:1500',
-            'Pros' => 'nullable|string',
-            'Cons' => 'nullable|string',
-            'Weight' => 'nullable|numeric|min:0',
-            'Electrical_assistance' => 'nullable|boolean',
-            'Foldable' => 'nullable|boolean',
-            'Speeds_number' => 'integer|min:0',
-            'Brakes_type' => 'string|max:500',
-            'Frame_height' => 'numeric|min:0',
-            'Disability_type' => 'string|max:500',
-            'Bike_use' => 'string|max:500',
-            'Pedal_way' => 'string|max:500',
-            'Dexterity_arms' => 'nstring|max:500',
-            'Balance' => 'string|max:500',
-            'Picture' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // les règles de validation
+            'bike_name' => 'required|string|max:70',
+            'description' => 'required|string|max:1500',
+            'pros' => 'required|string',
+            'cons' => 'required|string',
+            'weight' => 'required|numeric|min:0',
+            'electrical_assistance' => 'required|boolean',
+            'foldable' => 'required|boolean',
+            'speeds_number' => 'required|integer|min:0',
+            'brakes_type' => 'required|string|max:500',
+            'frame_height' => 'required|numeric|min:0',
+            'disability_type' => 'required|string|max:500',
+            'bike_use' => 'required|string|max:500',
+            'pedal_way' => 'required|string|max:500',
+            'dexterity_arms' => 'required|string|max:500',
+            'balance' => 'required|string|max:500',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-        if ($request->hasFile('Picture')) {
-            $path = $request->file('Picture')->store('bikes', 'public');
-            $request->merge(['Picture' => $path]);
+        if ($request->hasFile('picture')) {
+            $path = $request->file('picture')->store('bikes', 'public');
+            $request->merge(['picture' => $path]);
         }
         Bike::create($request->all());
 
@@ -97,9 +97,28 @@ class BikeController extends Controller
     public function update(Request $request, Bike $bike)
     {
         $request->validate([
-            // Ajoutez les règles de validation ici
+            //les règles de validation
+            'bike_name' => 'required|string|max:70',
+            'description' => 'required|string|max:1500',
+            'pros' => 'required|string',
+            'cons' => 'required|string',
+            'weight' => 'required|numeric|min:0',
+            'electrical_assistance' => 'required|boolean',
+            'foldable' => 'required|boolean',
+            'speeds_number' => 'required|integer|min:0',
+            'brakes_type' => 'required|string|max:500',
+            'frame_height' => 'required|numeric|min:0',
+            'disability_type' => 'required|string|max:500',
+            'bike_use' => 'required|string|max:500',
+            'pedal_way' => 'required|string|max:500',
+            'dexterity_arms' => 'required|string|max:500',
+            'balance' => 'required|string|max:500',
+            'picture' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+        if ($request->hasFile('picture')) {
+            $path = $request->file('picture')->store('bikes', 'public');
+            $request->merge(['picture' => $path]);
+        }
         $bike->update($request->all());
 
         return redirect()->route('touslesvelos')
