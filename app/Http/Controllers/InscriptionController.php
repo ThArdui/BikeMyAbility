@@ -29,13 +29,21 @@ class InscriptionController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
+        $request->validate([
+            'email' => 'required|string|email|',
+            'password' => 'required|string|min:8'
+        ], [
+            'password.required' => 'Le mot de passe est obligatoire',
+            'email.required' => 'Entrez une adresse email',
+        ]);
 
         if (Auth::attempt($credentials)) {
             return redirect()->route('bikesearch')->with('success', 'Connection réussie !');
         } else {
             return back()->withErrors([
-                'email' => 'Les informations d\'identification ne correspondent pas à nos enregistrements.',
-            ]);
+                'login_error'=> 'Email ou mot de passe invalide.',
+
+            ])->withInput();
         }
 
         // Authentication failed, redirect back with error message
@@ -65,6 +73,9 @@ class InscriptionController extends Controller
             'password_confirmation' => 'required|same:password'
         ], [
                 'name.required' => 'Le nom est obligatoire',
+                'name.alpha_dash' => 'Uniquement que des lettres alphabétiques',
+                'firstname.alpha_dash' => 'Uniquement que des lettres alphabétiques',
+                'password.required' => 'Le mot de passe est obligatoire',
                 'password_confirmation.required' => 'Le mot de passe est obligatoire',
                 'password_confirmation.same' => 'Les deux mots de passe doivent correspondre !',
                 'email.unique' => 'cette adresse mail est déja utilisée',
@@ -78,7 +89,7 @@ class InscriptionController extends Controller
             'password' => bcrypt($request->password),
         ]);
         Auth::login($user);
-        
+
         return view('auth.result')->with('success', 'Inscription réussie !');
         //return redirect('/login')->with('success', 'Inscription réussie !');
     }
