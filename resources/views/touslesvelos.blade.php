@@ -1,6 +1,6 @@
 @extends('template.projet')
 @section('titre')
-    Gallerie des vélos
+    Galerie des vélos
 @endsection
 <!-- changements thomas -->
 @section('content')

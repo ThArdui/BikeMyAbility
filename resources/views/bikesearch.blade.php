@@ -10,24 +10,27 @@ Trouvez votre vélo idéal - BikemyAbility
     <!-- handicap ok-->
     <fieldset>
         <legend> Votre type d'handicap</legend>
-         <p> <label for="physique">Physique</label>
-                 <input id="physique" name="handicap[]"  type="checkbox" value="physique" >
+
+         <p>    <input id="physique" name="handicap[]"  type="checkbox" value="physique" >
+             <label for="physique">Physique</label>
         </p>
          <p>
-            <label for="auditif">auditif</label>
-                <input id="auditif" name="handicap[]" type="checkbox"  value="auditif" >
+             <input id="auditif" name="handicap[]" type="checkbox"  value="auditif" >
+            <label for="auditif">Auditif</label>
+
         </p>
          <p>
+             <input id="visuel" name="handicap[]"  type="checkbox" value="visuel" >
            <label for="visuel">Visuel</label>
-               <input id="visuel" name="handicap[]"  type="checkbox" value="visuel" >
+
        </p>
-         <p>
+         <p>        <input id="cognitif" name="handicap[]"  type="checkbox" value="cognitif" >
             <label for="cognitif"> Cognitif</label>
-                <input id="cognitif" name="handicap[]"  type="checkbox" value="cognitif" >
+
         </p>
-         <p>
-            <label for="mental">mental</label>
-                <input id="mental" name="handicap[]" type="checkbox" value="mental" >
+         <p>             <input id="mental" name="handicap[]" type="checkbox" value="mental" >
+            <label for="mental">Mental</label>
+
         </p>
     </fieldset>
     <!-- assistance electrique ok -->
