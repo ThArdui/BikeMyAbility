@@ -18,6 +18,11 @@
         @endsection
         <h1 class="text-center text-danger-emphasis">@yield('titre1')</h1>
         @if ($userExists)
+            @if ($errors->has('login_error'))
+                <div class="alert alert-danger">
+                    {{ $errors->first('login_error') }}
+                </div>
+            @endif
             <p> * Champs obligatoires</p>
             <form method="post" action="{{ route('login') }}" class="col-md-6 mx-auto">
                 @csrf
@@ -51,11 +56,6 @@
                     <button type="submit" class="btn btn-primary">Se loguer</button>
                 </p>
             </form>
-            @if ($errors->has('login_error'))
-                <div class="alert alert-danger">
-                    {{ $errors->first('login_error') }}
-                </div>
-            @endif
         @else
             <p> * Champs obligatoires</p>
             <form method="post" action="{{ route('register') }}" class="col-md-6 mx-auto">
