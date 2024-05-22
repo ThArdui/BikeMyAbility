@@ -21,7 +21,7 @@
     <div class="col-12 text-center">
 
         <p>
-            <img src="{{ asset('pictures/lesbikers.jpg') }}"  class="img-fluid rounded" alt="">
+            <img src="{{ asset('pictures/lesbikers.jpg') }}"  class="img-fluid rounded" alt="Equipe des Bikers, créateurs de BikeMyAbility. De gauche à droite, Anthony, Carmen, Thomas et Christian.">
         </p>
 
 
