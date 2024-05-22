@@ -52,5 +52,7 @@ Nous contacter!
                   </div>
         <button type="submit" class="btn btn-primary">Envoyez le message</button>
     </form>
+
+
 @endsection
 <!-- changements thomas -->
