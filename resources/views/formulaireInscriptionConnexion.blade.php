@@ -38,7 +38,7 @@
                 <p> <button type="submit" class="btn btn-primary">Se loguer</button> </p>
             </form>
             <div class="row">
-   
+
                 <div class="col-12 text-center">
 
                     <p>
