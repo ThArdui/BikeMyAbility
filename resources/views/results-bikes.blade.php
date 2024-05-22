@@ -6,9 +6,9 @@
     <!-- resources/views/results-bike.blade.php -->
     @if(count($results) > 0)
         <h1>Résultats de la recherche</h1>
+       <ul>
         @foreach($results as $bike)
-            <div class="cadre-velo">
-<li>{{ $bike->Bike_name }}</li>
+                <li>{{ $bike->Bike_name }}</li>
                 <a href="{{ route('details.velo', $bike->id) }}">
                     <img src="{{$bike->Picture}}" alt="Le velo {{$bike->Bike_name}}"></a>
                 <p>{{$bike->Description}}</p>
@@ -17,9 +17,8 @@
                      <i class="fas fa-arrow-right"></i>
                  </a>
                  --}}
-            </div>
         @endforeach
-        </ul>
+       </ul>
     @else
         <h1>Résultats de la recherche</h1>
         <p>Aucun vélo disponible. Veillez repeter la recherche avec d'autres critères.</p>
