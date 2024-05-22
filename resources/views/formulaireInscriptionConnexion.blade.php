@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <p>
                         <label for="email">Email <span aria-hidden="true">* </span> (ex : nom@example.com)</label>
-                        <input type="email" class="form-control" id="email" name="email" max="255" required>
+                        <input type="email" class="form-control" id="email" name="email" value="{{old('email')}}" max="255" required>
 
                     </p>
                                  </div>
@@ -44,14 +44,14 @@
                         <div class="form-group">
                             <p>
                                 <label for="name">Nom  <span aria-hidden="true">* </span></label>
-                                <input type="text" class="form-control" id="name" name="name" max="255" required>
+                                <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" max="255" required>
                             </p>
 
                         </div>
                         <div class="form-group">
                             <p>
                                 <label for="firstname">Prénom <span aria-hidden="true">* </span></label>
-                                <input type="text" class="form-control" id="firstname" name="firstname" max="255" required>
+                                <input type="text" class="form-control" id="firstname" name="firstname" value="{{old('firstname')}}" max="255" required>
 
                             </p>
                         </div>
