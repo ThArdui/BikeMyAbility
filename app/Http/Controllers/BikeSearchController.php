@@ -52,16 +52,6 @@ class BikeSearchController extends controller
             $fieldsUsed = true;
         }
         }
-// dexterite arms soucis
- /*       if (isset($searchCriteria['Dexterity_arms']) && !empty($searchCriteria['Dexterity_arms'])) {
-            $usearms = (array)$searchCriteria['Dexterity_arms'];
-            if($usearms[0]==='good') {
-                $bikes = $bikes->where('Dexterity_arms','good');
-            }
-            if($usearms[0]==='average') {
-                $bikes = $bikes->where('Dexterity_arms','average');
-            }
-        } */
 // type de freinage ok
         if (isset($searchCriteria['brakes']) && !empty($searchCriteria['brakes']) && $searchCriteria['brakes']!=="anyway_brakes") {
             if($searchCriteria['brakes']==='drum_brake'){
@@ -75,8 +65,7 @@ class BikeSearchController extends controller
             }
             $fieldsUsed = true;
         }
- // aquilibre
-// hauteur de cadre
+// hauteur de cadre ok
 if (isset($searchCriteria['frame_height']) && $searchCriteria['frame_height']!=="frame_anyway") {
     if($searchCriteria['frame_height']==='frame_hight') {
         $bikes = $bikes->where('Frame_height','cadre haut');

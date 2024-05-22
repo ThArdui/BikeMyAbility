@@ -7,7 +7,7 @@ Trouvez votre vélo idéal - BikemyAbility
     <h1 class="text-center text-danger-emphasis"> Trouvez votre vélo idéal</h1>
 <form action="{{url('rechercher-velos')}}" method="get">
     @csrf
-    <!-- handicap -->
+    <!-- handicap ok-->
     <fieldset>
         <legend> Votre type d'handicap</legend>
          <p> <label for="physique">Physique</label>
@@ -30,7 +30,7 @@ Trouvez votre vélo idéal - BikemyAbility
                 <input id="mental" name="handicap[]" type="checkbox" value="mental" >
         </p>
     </fieldset>
-    <!-- assistance electrique -->
+    <!-- assistance electrique ok -->
     <fieldset>
         <legend> Assistance electrique </legend>
         <p>
@@ -40,7 +40,7 @@ Trouvez votre vélo idéal - BikemyAbility
             <input id="assistance_electric_no" name="electrical_assistance" type="radio" value="non_assistance_electric" ><label for="assistance_electric_no" aria-label= "Non assistance electrique">Non</label>
         </p>
     </fieldset>
-    <!-- utility  -->
+    <!-- utility ok -->
     <fieldset>
         <legend> Comment souhaitez-vous vivre votre plaisir cyclable?</legend>
 
@@ -52,7 +52,7 @@ Trouvez votre vélo idéal - BikemyAbility
             <input  id="several " type="radio" name="utility" value="several"> <label for="several ">À plusieurs</label>
         </p>
     </fieldset>
-    <!-- pedalage  o-->
+    <!-- pedalage  ok-->
     <fieldset>
         <legend> Pédalage </legend>
         <p>
@@ -72,18 +72,7 @@ Trouvez votre vélo idéal - BikemyAbility
             <label for="no_pedal">  Auccun des deux</label>
 </p>
     </fieldset>
-    <!-- dexterity soucis
-    <fieldset>
-        <legend> Dextérité membres supérieurs</legend>
-        <label for="usearms">Niveau de dextérité des membres supérieurs :</label>
-        <select id="usearms" name="Dexterity_arms" required>
-            <option value="">Sélectionnez le niveau de dextérité des membres supérieurs</option>
-            <option value="dexterity_good"> La dextérité de mes mains est bonne : je sais conduire, freiner, changer les vitesses… </option>
-            <option value="dexterity_average"> La dextérité de mes mains est moyenne: je sais me tenir à un guidon mais les mouvements précis tels que la conduite ou le freinage sont compliqués. </option>
-            <option value="dexterity_difficult"> J’ai du mal à utiliser mes mains</option>
-        </select>
-    </fieldset>
-    -->
+<!-- freinage ok -->
     <fieldset>
     <legend> Type de freinage </legend>
     <p> <input type="checkbox"  id="drum_brake" name="brakes[]" value="drum_brake">
@@ -95,17 +84,7 @@ Trouvez votre vélo idéal - BikemyAbility
     <p> <input type="checkbox"  id="anyway_brakes" name="brakes[]" value="anyway_brakes">
         <label for="anyway_brakes"> Peu importe </label>  </p>
 </fieldset>
-    <fieldset>
-        <legend> Equilibre</legend>
-        <label for="balance">Niveau d'équilibre :</label>
-        <select id="balance" name="balance" required>
-            <option value="">Sélectionnez votre niveau d'équilibre</option>
-            <option value="good_balance">Je peux tenir sur une selle</option>
-            <option value="seat_needed">J’ai besoin d’être dans un siège</option>
-            <option value="seat_with_positioning_elements">J’ai besoin d’être dans un siège où des éléments de positionnement tels  que des ceintures sont intégrables </option>
-            <option value="wheelchair_preference"> J’ai besoin/ je préfère rester dans mon fauteuil roulant </option>
-        </select>
-    </fieldset>
+  <!-- hauteur de cadre ok -->
     <fieldset>
         <legend> Hauteur du cadre</legend>
         <p> <input id="frame_hight" type="radio" name="frame_height" value="frame_hight">
