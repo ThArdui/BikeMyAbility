@@ -35,4 +35,4 @@
     <p>  Nous espèrons  que vous aurez une  expérience agréable sur BikeMyAbility.</p>
     <p> N'hésitez  pas à nous contacter, nous vous aiderons avec plaisir:</p>
 
-    <p>   <a href="{{ route('contact') }}" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a> </p>
+    <p>   <a href="{{ route('contact') }}" class="text-dark" aria-current="{{ request()->is('contact') ? 'page' : '' }}">Nous contacter</a> </p>
