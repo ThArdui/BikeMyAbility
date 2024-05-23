@@ -56,6 +56,18 @@
                     <button type="submit" class="btn btn-primary">Se loguer</button>
                 </p>
             </form>
+
+            <div class="row">
+                <!-- changements thomas -->
+                <div class="col-12 text-center">
+
+                    <p>
+                        <img src="{{ asset('pictures/jeuxparalympiques.jpg') }}"  class="img-fluid rounded" alt="">
+                    </p>
+
+                </div>
+            </div>
+
         @else
             <p> * Champs obligatoires</p>
             <form method="post" action="{{ route('register') }}" class="col-md-6 mx-auto">
