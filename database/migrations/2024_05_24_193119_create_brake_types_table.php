@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('bikes', function (Blueprint $table) {
-            $table->string('description', 1500)->change();
+        Schema::create('brake_types', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -21,11 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-
-            Schema::table('bikes', function (Blueprint $table)
-            {
-                $table->string('Description')->change();
-            });
-
+        Schema::dropIfExists('brake_types');
     }
 };

@@ -13,22 +13,25 @@ return new class extends Migration
     {
         Schema::create('bikes', function (Blueprint $table) {
             $table->id();
-            $table->string('Bike_name', 70);
-            $table->string('Description', 70);
-            $table->string('Pros', 1000);
-            $table->string('Cons', 1000);
-            $table->integer('Weight');
-            $table->boolean('Electrical_assistance')->default(false);
-            $table->boolean('Foldable')->default(false);
-            $table->integer('Speeds_number');
-            $table->string('Brakes_type', 70);
-            $table->string('Frame_height', 70);
-            $table->string('Disability_type', 70);
-            $table->string('Bike_use', 70);
-            $table->string('Pedal_way', 70);
-            $table->string('Dexterity_arms', 70);
-            $table->string('Balance', 70);
-            $table->string('Picture', 70)->nullable(); // Assuming a path to the image will be stored
+            $table->string('name', 70);
+            $table->string('description', 70);
+            $table->string('pros', 1000);
+            $table->string('cons', 1000);
+            $table->integer('weight');
+            $table->boolean('electrical_assistance')->default(false);
+            $table->boolean('foldable')->default(false);
+            $table->integer('speeds_number');
+            $table->string('brakes_type', 70);
+            $table->string('frame_height', 70);
+            $table->string('disability_type', 70);
+            $table->string('bike_use', 70);
+            $table->string('pedal_way', 70);
+            $table->string('dexterity_arms', 70);
+            $table->string('balance', 70);
+            $table->string('picture', 70)->nullable(); // Assuming a path to the image will be stored
+            $table->foreignId('brake_type_id')->constrained();
+            $table->foreignId('disability_type_id')->constrained();
+            $table->foreignId('pedal_way_id')->constrained();
             $table->timestamps();
         });
     }

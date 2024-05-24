@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('bikes', function (Blueprint $table) {
-            $table->string('Brakes_type', 500)->change();
-            $table->string('Frame_height', 500)->change();
-            $table->string('Disability_type', 500)->change();
-            $table->string('Bike_use', 500)->change();
-            $table->string('Pedal_way', 500)->change();
-            $table->string('Dexterity_arms', 500)->change();
-            $table->string('Balance', 500)->change();
-            $table->string('Picture', 500)->change();
+            $table->string('brakes_type', 500)->change();
+            $table->string('frame_height', 500)->change();
+            $table->string('disability_type', 500)->change();
+            $table->string('bike_use', 500)->change();
+            $table->string('pedal_way', 500)->change();
+            $table->string('dexterity_arms', 500)->change();
+            $table->string('balance', 500)->change();
+            $table->string('picture', 500)->change();
 
         });
     }
